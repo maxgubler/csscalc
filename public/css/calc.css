@@ -149,3 +149,78 @@ html, body{
     font-size: 0.75em;
     font-weight: bold;
 }
+#columns {
+    margin-top: 5%;
+}
+#col-1 {
+    position: relative;
+    display: inline-block;
+    /*height: 40%;*/
+    width: 13%;
+    /*background: #555;*/
+    margin-left: 10%;
+}
+.col-1-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.7em;
+    font-weight: bold;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+#col-1-second {
+    background: #37a1cc;
+}
+#col-1-diamond {
+    background: #b5ca96;
+    color: black;
+}
+#col-1-on {
+    border-radius: 40px 40px 50px 200px;
+    padding-top: 12%;
+    padding-bottom: 20%;
+    padding-left: 5%;
+}
+#col-2 {
+    position: absolute;
+    display: inline-block;
+    width: 13%;
+    padding-top: 1%;
+    margin-left: 4%;
+}
+.col-2-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.7em;
+    font-weight: bold;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+.col-2-btn-blk {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.7em;
+    font-weight: bold;
+    
+    padding-top: 6%;
+    padding-bottom: 6%;
+    margin-left: -6%;
+    
+    background: #222222;
+    border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
+    border-left: 2px solid #828282;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+    
+    cursor: pointer;
+}
