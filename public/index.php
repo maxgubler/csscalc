@@ -32,26 +32,145 @@
                             </div>
                             <div id="columns">
                                 <div id="col-1">
-                                    <div id="col-1-second" class="col-1-btn">2ND</div>
-                                    <div id="col-1-diamond" class="col-1-btn"><></div>
-                                    <div id="col-1-home" class="col-1-btn">HOME</div>
-                                    <div id="col-1-x" class="col-1-btn">X</div>
-                                    <div id="col-1-equal" class="col-1-btn">=</div>
-                                    <div id="col-1-pipe" class="col-1-btn">|</div>
-                                    <div id="col-1-ee" class="col-1-btn">EE</div>
-                                    <div id="col-1-store" class="col-1-btn">STO></div>
-                                    <div id="col-1-on" class="col-1-btn">ON</div>
+                                    <div id="col-1-second" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>2ND</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-diamond" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span><></span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-home" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>HOME</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-x" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>X</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-equal" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>=</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-pipe" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>|</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-ee" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>EE</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-store" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>STO></span>
+                                        </div>
+                                    </div>
+                                    <div id="col-1-on" class="col-1-btn">
+                                        <div class="btn-padding">
+                                            <span>ON</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="col-2">
-                                    <div id="col-2-shift" class="col-2-btn">^</div>
-                                    <div id="col-2-alpha" class="col-2-btn">ALPHA</div>
-                                    <div id="col-2-mode" class="col-2-btn">MODE</div>
-                                    <div id="col-2-y" class="col-2-btn">Y</div>
-                                    <div id="col-2-leftpar" class="col-2-btn">(</div>
-                                    <div id="col-2-7" class="col-2-btn-blk">7</div>
-                                    <div id="col-2-4" class="col-2-btn-blk">4</div>
-                                    <div id="col-2-1" class="col-2-btn-blk">1</div>
-                                    <div id="col-2-0" class="col-2-btn-blk">0</div>
+                                    <div id="col-2-shift" class="col-2-btn">
+                                        <div class="btn-padding">
+                                            <span>^</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-alpha" class="col-2-btn">
+                                        <div class="btn-padding">
+                                            <span>ALPHA</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-mode" class="col-2-btn">
+                                        <div class="btn-padding">
+                                            <span>MODE</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-y" class="col-2-btn">
+                                        <div class="btn-padding">
+                                            <span>Y</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-leftpar" class="col-2-btn">
+                                        <div class="btn-padding">
+                                            <span>(</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-7" class="col-2-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>7</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-4" class="col-2-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>4</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-1" class="col-2-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-2-0" class="col-2-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col-3">
+                                    <div id="col-3-esc" class="col-3-btn">
+                                        <div class="btn-padding">
+                                            <span>ESC</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-apps" class="col-3-btn">
+                                        <div class="btn-padding">
+                                            <span>APPS</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-cat" class="col-3-btn">
+                                        <div class="btn-padding">
+                                            <span>CATALOG</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-z" class="col-3-btn">
+                                        <div class="btn-padding">
+                                            <span>Z</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-rightpar" class="col-3-btn">
+                                        <div class="btn-padding">
+                                            <span>)</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-8" class="col-3-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-5" class="col-3-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-2" class="col-3-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-3-period" class="col-3-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>.</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

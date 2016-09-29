@@ -151,21 +151,45 @@ html, body{
 }
 #columns {
     margin-top: 5%;
+    color: #dddddd;
 }
-#col-1 {
+#columns span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.btn-padding {
+    padding-top: 20%;
+    padding-bottom: 20%;
+    display: block;
+    position: relative;
+}
+#col-1, #col-2, #col-3 {
     position: relative;
     display: inline-block;
-    /*height: 40%;*/
+    vertical-align: top;
     width: 13%;
-    /*background: #555;*/
+}
+#col-1 {
     margin-left: 10%;
 }
+#col-2, #col-3 {
+    margin-left: 2.5%;
+}
+
+.col-1-btn, .col-2-btn, .col-3-btn {
+    width: 100%;
+}
+
 .col-1-btn {
     margin-bottom: 30%;
     text-align: center;
     color: #dddddd;
     font-size: 0.7em;
     font-weight: bold;
+    letter-spacing: -0.04em;
     
     background: #717171;
     border-radius: 30% / 100%;
@@ -186,19 +210,22 @@ html, body{
     padding-bottom: 20%;
     padding-left: 5%;
 }
-#col-2 {
-    position: absolute;
-    display: inline-block;
-    width: 13%;
-    padding-top: 1%;
-    margin-left: 4%;
-}
 .col-2-btn {
     margin-bottom: 30%;
     text-align: center;
     color: #dddddd;
     font-size: 0.7em;
     font-weight: bold;
+    letter-spacing: -0.04em;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+.col-2-btn {
+    margin-bottom: 30%;
     
     background: #717171;
     border-radius: 30% / 100%;
@@ -210,16 +237,64 @@ html, body{
     margin-bottom: 30%;
     text-align: center;
     color: #dddddd;
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-weight: bold;
+    letter-spacing: -0.04em;
     
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     margin-left: -6%;
     
     background: #222222;
     border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
     border-left: 2px solid #828282;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+    
+    cursor: pointer;
+}
+.col-3-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+.col-3-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+.col-3-btn-blk {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: -0.04em;
+    
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background: #222222;
+    
+    border-radius: 15%;
+    border-left: 1px solid #7b7b7b;
+    border-right: 1px solid #4e4e4e;
     box-shadow: 0.3px 0.15px 1px 0px #383838;
     
     cursor: pointer;
