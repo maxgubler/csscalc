@@ -69,7 +69,7 @@
                                     </div>
                                     <div id="col-1-store" class="col-1-btn">
                                         <div class="btn-padding">
-                                            <span>STO></span>
+                                            <span>STO ></span>
                                         </div>
                                     </div>
                                     <div id="col-1-on" class="col-1-btn">
