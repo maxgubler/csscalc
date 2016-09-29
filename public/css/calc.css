@@ -1,0 +1,151 @@
+html, body{
+    height: 100%;
+    font-size: 100%;
+}
+/*.wrapper{
+    position: relative;
+    width: 15%;
+    overflow: hidden;
+    background: #ffffff;
+    margin: auto;
+}
+.wrapper:before{
+    content: "";
+    display: block;
+    padding-top: 200%;
+}
+.wrapper-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+}
+.wrapper-content div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.wrapper-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+}*/
+#col-half {
+    position: relative;
+    width: 50%;
+}
+#calc-outer {
+    position: relative;
+    width: 50%;
+    padding-bottom: 100%;
+    
+    background: #111111;
+    -moz-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
+    -webkit-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
+    border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
+}
+#inner-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    box-shadow: inset 0px 0px 8px 3px rgba(255,255,255,0.4);
+}
+#calc-inner {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background: #777777;
+    -moz-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
+    -webkit-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
+    border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
+    width: 96%;
+    height: 96%;
+    margin: 3% 2%;
+    
+    box-shadow: inset 0px 0px 12px 6px rgba(0,0,0,0.2);
+}
+#calc-screen {
+    position: relative;
+    /*background: #a09d75;*/
+    background: #739070;
+    border-left: 2px solid #8c8c8c;
+    border-top: 2px solid #565656;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: inset -4px 4px 14px 5px rgba(0,0,0,0.2);
+    
+    margin-top: 15%;
+    height: 25%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+#calc-screen-shadow-top {
+    position: relative;
+    background: transparent;
+    box-shadow: inset -2px 8px 6px rgba(0,0,0,0.3);
+    height: 100%;
+}
+#calc-screen-spacer {
+    position: relative;
+    border-left: 2px solid #818181;
+    border-right: 2px solid #6d6d6d;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: inset 0px 5px 6px -2px rgba(189,189,189,0.5);
+    
+    height: 2.5%;
+    
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+#fbutton-group {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fbutton {
+    position: relative;
+    display: inline-block;
+    padding: 5%;
+    margin: 4%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 100%;
+    background: #717171;
+    box-shadow: -0.5px 0.2px 4px 0px #191919;
+    border-top: 1px solid #888888;
+    border-right: 1px solid #888888;
+    border-bottom: 1px solid #717171;
+    border-left: 1px solid #9c9c9c;
+    
+    cursor: pointer;
+}
+.fbutton span {
+    position: absolute;
+    /*top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    color: #dddddd;
+    
+    font-size: 0.75em;
+    font-weight: bold;
+}
