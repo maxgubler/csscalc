@@ -150,6 +150,47 @@ html, body{
     font-size: 0.75em;
     font-weight: bold;
 }
+#arrow-group {
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    float: right;
+    right: 0;
+    margin-top: 4%;
+}
+.arrow {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: #222222;
+    box-shadow: -0.5px 0.2px 4px 0px #191919;
+    border-top: 1px solid #888888;
+    border-right: 1px solid #888888;
+    border-bottom: 1px solid #717171;
+    border-left: 1px solid #9c9c9c;
+    cursor: pointer;
+}
+.arrow span {
+    position: absolute;
+    color: #dddddd;
+    
+    font-size: 0.75em;
+    font-weight: bold;
+}
+#arrow-updown {
+    padding-top: 25%;
+    padding-bottom: 25%;
+    margin-top: -12%;
+    border-radius: 40%;
+}
 #columns {
     margin-top: 5%;
     color: #dddddd;
@@ -174,7 +215,7 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-#col-1, #col-2, #col-3 {
+#col-1, #col-2, #col-3, #col-4 {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -191,7 +232,10 @@ html, body{
     margin-top: 1%;
     margin-left: 2.5%;
 }
-
+#col-4 {
+    margin-top: 19%;
+    margin-left: 2.5%;
+}
 .col-1-btn, .col-2-btn, .col-3-btn {
     width: 100%;
 }
@@ -281,19 +325,6 @@ html, body{
     
     cursor: pointer;
 }
-.col-3-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
 .col-3-btn-blk {
     margin-bottom: 30%;
     text-align: center;
@@ -310,7 +341,6 @@ html, body{
     
     cursor: pointer;
 }
-
 #col-3-esc {
     background: #222222;
 }
@@ -327,4 +357,33 @@ html, body{
     -moz-transfor:scale(0.9,1);
     -webkit-transform:scale(0.9,1);
     transform:scale(0.9,1);
+}
+.col-4-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.5em;
+    font-weight: bold;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+.col-4-btn-blk {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.9em;
+    font-weight: bold;
+    
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background: #222222;
+    
+    border-radius: 15%;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+    
+    cursor: pointer;
 }

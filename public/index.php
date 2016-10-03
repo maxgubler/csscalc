@@ -30,6 +30,11 @@
                                 <div class="fbutton"><span>F4</span></div>
                                 <div class="fbutton"><span>F5</span></div>
                             </div>
+                            <div id="arrow-group">
+                                <div id="arrow-left" class="arrow"><span><</span></div>
+                                <div id="arrow-updown" class="arrow"><span>X</span></div>
+                                <div id="arrow-right" class="arrow"><span>></span></div>
+                            </div>
                             <div id="columns">
                                 <div id="col-1">
                                     <div id="col-1-second" class="col-1-btn">
@@ -169,6 +174,43 @@
                                     <div id="col-3-period" class="col-3-btn-blk">
                                         <div class="btn-padding">
                                             <span>.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col-4">
+                                    <div id="col-4-backspace" class="col-4-btn">
+                                        <div class="btn-padding">
+                                            <span><==</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-t" class="col-4-btn">
+                                        <div class="btn-padding">
+                                            <span>T</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-apostrophy" class="col-4-btn">
+                                        <div class="btn-padding">
+                                            <span>'</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-9" class="col-4-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>9</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-6" class="col-4-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>6</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-3" class="col-4-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-4-negative" class="col-4-btn-blk">
+                                        <div class="btn-padding">
+                                            <span>(-)</span>
                                         </div>
                                     </div>
                                 </div>
