@@ -2,37 +2,6 @@ html, body{
     height: 100%;
     font-size: 100%;
 }
-/*.wrapper{
-    position: relative;
-    width: 15%;
-    overflow: hidden;
-    background: #ffffff;
-    margin: auto;
-}
-.wrapper:before{
-    content: "";
-    display: block;
-    padding-top: 200%;
-}
-.wrapper-content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    color: #ffffff;
-}
-.wrapper-content div {
-   display: table;
-   width: 100%;
-   height: 100%;
-}
-.wrapper-content span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    color: #ffffff;
-}*/
 #col-half {
     position: relative;
     width: 50%;
