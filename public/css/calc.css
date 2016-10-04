@@ -42,6 +42,13 @@ html, body{
     
     box-shadow: inset 0px 0px 12px 6px rgba(0,0,0,0.2);
 }
+#calc-inner-gradient {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%, rgba(133, 133, 133, 1) 65%, rgba(0,0,0,0) 70%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%,rgba(133, 133, 133, 1) 65%,rgba(0,0,0,0) 70%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgb(112, 112, 112) 25%,rgb(133, 133, 133) 65%,rgba(0,0,0,0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 97%;
+    border-radius: 30%;
+}
 #calc-screen {
     position: relative;
     /*background: #a09d75;*/

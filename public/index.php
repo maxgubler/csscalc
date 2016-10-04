@@ -16,6 +16,7 @@
                     <div id="calc-outer">
                         <div id="inner-wrap">
                             <div id="calc-inner">
+                                <div id="calc-inner-gradient"></div>
                             </div>
                             <div id="calc-screen">
                                 <div id="calc-screen-shadow-top">
