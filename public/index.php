@@ -32,7 +32,10 @@
                             </div>
                             <div id="arrow-group">
                                 <div id="arrow-left" class="arrow"><span><</span></div>
-                                <div id="arrow-updown" class="arrow"><span>X</span></div>
+                                <div id="arrow-updown" class="arrow">
+                                    <div id="arrow-up" class="arrow"><span>^</span></div>
+                                    <div id="arrow-down" class="arrow"><span>v</span></div>
+                                </div>
                                 <div id="arrow-right" class="arrow"><span>></span></div>
                             </div>
                             <div id="columns">
@@ -211,6 +214,43 @@
                                     <div id="col-4-negative" class="col-4-btn-blk">
                                         <div class="btn-padding">
                                             <span>(-)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col-5">
+                                    <div id="col-5-clear" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>CLEAR</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-carrot" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>^</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-div" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>÷</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-mult" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>×</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-minus" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>−</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-plus" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>+</span>
+                                        </div>
+                                    </div>
+                                    <div id="col-5-enter" class="col-5-btn">
+                                        <div class="btn-padding">
+                                            <span>ENTER</span>
                                         </div>
                                     </div>
                                 </div>

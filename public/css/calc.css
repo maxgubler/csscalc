@@ -110,23 +110,15 @@ html, body{
 }
 #fbutton-group {
     position: relative;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .fbutton {
     position: relative;
     display: inline-block;
     padding: 5%;
-    margin: 4%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2.5%;
     
     border-radius: 100%;
     background: #717171;
@@ -140,19 +132,16 @@ html, body{
 }
 .fbutton span {
     position: absolute;
-    /* flexbox
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;*/
     color: #dddddd;
-    
     font-size: 0.75em;
     font-weight: bold;
+    left: 0px;
+    right: 0px;
+    line-height: 5%;
 }
 #arrow-group {
     position: absolute;
-    width: 40%;
+    width: 48%;
     text-align: center;
     display: flex;
     justify-content: flex-start;
@@ -160,6 +149,7 @@ html, body{
     float: right;
     right: 0;
     margin-top: 4%;
+    margin-right: -8%;
 }
 .arrow {
     position: relative;
@@ -171,11 +161,11 @@ html, body{
     align-items: center;
     border-radius: 100%;
     background: #222222;
-    box-shadow: -0.5px 0.2px 4px 0px #191919;
+    /*box-shadow: -0.5px 0.2px 4px 0px #191919;
     border-top: 1px solid #888888;
     border-right: 1px solid #888888;
     border-bottom: 1px solid #717171;
-    border-left: 1px solid #9c9c9c;
+    border-left: 1px solid #9c9c9c;*/
     cursor: pointer;
 }
 .arrow span {
@@ -186,10 +176,21 @@ html, body{
     font-weight: bold;
 }
 #arrow-updown {
-    padding-top: 25%;
-    padding-bottom: 25%;
-    margin-top: -12%;
     border-radius: 40%;
+    padding: 24% 4%;
+    margin: -12% 4%;
+}
+#arrow-up {
+    position: absolute;
+    top: 0;
+    padding: 125%;
+    border-radius: 100%;
+}
+#arrow-down {
+    position: absolute;
+    bottom: 0;
+    padding: 125%;
+    border-radius: 100%;
 }
 #columns {
     margin-top: 5%;
@@ -215,31 +216,34 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-#col-1, #col-2, #col-3, #col-4 {
+#col-1, #col-2, #col-3, #col-4, #col-5{
     position: relative;
     display: inline-block;
     vertical-align: top;
     width: 13%;
 }
 #col-1 {
-    margin-left: 10%;
+    margin-left: 9.4%;
 }
 #col-2 {
-    margin-top: 0.75%;
+    margin-top: 0.2%;
     margin-left: 2.5%;
 }
 #col-3 {
-    margin-top: 1%;
+    margin-top: 0.5%;
     margin-left: 2.5%;
 }
 #col-4 {
-    margin-top: 19%;
+    margin-top: 18.4%;
     margin-left: 2.5%;
 }
-.col-1-btn, .col-2-btn, .col-3-btn {
+#col-5 {
+    margin-top: 18.2%;
+    margin-left: 2.5%;
+}
+.col-1-btn, .col-2-btn, .col-3-btn, .col-4-btn, .col-5-btn {
     width: 100%;
 }
-
 .col-1-btn {
     margin-bottom: 30%;
     text-align: center;
@@ -380,10 +384,29 @@ html, body{
     
     padding-top: 6%;
     padding-bottom: 6%;
-    background: #222222;
     
-    border-radius: 15%;
-    box-shadow: 0.3px 0.15px 1px 0px #383838;
+    background: #222222;
+    border-radius: 15% 25% 25% 15% / 15% 50% 50% 15%;
+    box-shadow: -0.3px 0.15px 1px 0px #383838;
     
     cursor: pointer;
+}
+.col-5-btn {
+    margin-bottom: 30%;
+    text-align: center;
+    color: #dddddd;
+    font-size: 0.5em;
+    font-weight: bold;
+    
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    
+    cursor: pointer;
+}
+#col-5-enter {
+    border-radius: 40px 40px 200px 50px;
+    padding-top: 12%;
+    padding-bottom: 20%;
+    padding-right: 5%;
 }
