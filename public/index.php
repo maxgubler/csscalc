@@ -32,7 +32,7 @@
                             </div>
                             <div id="arrow-group">
                                 <div id="arrow-left" class="arrow"><span><</span></div>
-                                <div id="arrow-updown" class="arrow">
+                                <div id="arrow-updown">
                                     <div id="arrow-up" class="arrow"><span>^</span></div>
                                     <div id="arrow-down" class="arrow"><span>v</span></div>
                                 </div>
