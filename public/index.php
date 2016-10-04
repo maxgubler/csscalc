@@ -41,217 +41,135 @@
                             <div id="columns">
                                 <div id="col-1">
                                     <div id="col-1-second" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>2ND</span>
-                                        </div>
+                                        <span>2ND</span>
                                     </div>
                                     <div id="col-1-diamond" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span><></span>
-                                        </div>
+                                        <span><></span>
                                     </div>
                                     <div id="col-1-home" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>HOME</span>
-                                        </div>
+                                        <span>HOME</span>
                                     </div>
                                     <div id="col-1-x" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>X</span>
-                                        </div>
+                                        <span>X</span>
                                     </div>
                                     <div id="col-1-equal" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>=</span>
-                                        </div>
+                                        <span>=</span>
                                     </div>
                                     <div id="col-1-pipe" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>|</span>
-                                        </div>
+                                        <span>|</span>
                                     </div>
                                     <div id="col-1-ee" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>EE</span>
-                                        </div>
+                                        <span>EE</span>
                                     </div>
                                     <div id="col-1-store" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>STO ></span>
-                                        </div>
+                                        <span>STO ></span>
                                     </div>
                                     <div id="col-1-on" class="col-1-btn">
-                                        <div class="btn-padding">
-                                            <span>ON</span>
-                                        </div>
+                                        <span>ON</span>
                                     </div>
                                 </div>
                                 <div id="col-2">
                                     <div id="col-2-shift" class="col-2-btn">
-                                        <div class="btn-padding">
-                                            <span>^</span>
-                                        </div>
+                                        <span>^</span>
                                     </div>
                                     <div id="col-2-alpha" class="col-2-btn">
-                                        <div class="btn-padding">
-                                            <span>ALPHA</span>
-                                        </div>
+                                        <span>ALPHA</span>
                                     </div>
                                     <div id="col-2-mode" class="col-2-btn">
-                                        <div class="btn-padding">
-                                            <span>MODE</span>
-                                        </div>
+                                        <span>MODE</span>
                                     </div>
                                     <div id="col-2-y" class="col-2-btn">
-                                        <div class="btn-padding">
-                                            <span>Y</span>
-                                        </div>
+                                        <span>Y</span>
                                     </div>
                                     <div id="col-2-leftpar" class="col-2-btn">
-                                        <div class="btn-padding">
-                                            <span>(</span>
-                                        </div>
+                                        <span>(</span>
                                     </div>
                                     <div id="col-2-7" class="col-2-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>7</span>
-                                        </div>
+                                        <span>7</span>
                                     </div>
                                     <div id="col-2-4" class="col-2-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>4</span>
-                                        </div>
+                                        <span>4</span>
                                     </div>
                                     <div id="col-2-1" class="col-2-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>1</span>
-                                        </div>
+                                        <span>1</span>
                                     </div>
                                     <div id="col-2-0" class="col-2-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>0</span>
-                                        </div>
+                                        <span>0</span>
                                     </div>
                                 </div>
                                 <div id="col-3">
                                     <div id="col-3-esc" class="col-3-btn">
-                                        <div class="btn-padding">
-                                            <span>ESC</span>
-                                        </div>
+                                        <span>ESC</span>
                                     </div>
                                     <div id="col-3-apps" class="col-3-btn">
-                                        <div class="btn-padding">
-                                            <span>APPS</span>
-                                        </div>
+                                        <span>APPS</span>
                                     </div>
                                     <div id="col-3-cat" class="col-3-btn">
-                                        <div class="btn-padding">
-                                            <span>CATALOG</span>
-                                        </div>
+                                        <span>CATALOG</span>
                                     </div>
                                     <div id="col-3-z" class="col-3-btn">
-                                        <div class="btn-padding">
-                                            <span>Z</span>
-                                        </div>
+                                        <span>Z</span>
                                     </div>
                                     <div id="col-3-rightpar" class="col-3-btn">
-                                        <div class="btn-padding">
-                                            <span>)</span>
-                                        </div>
+                                        <span>)</span>
                                     </div>
                                     <div id="col-3-8" class="col-3-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>8</span>
-                                        </div>
+                                        <span>8</span>
                                     </div>
                                     <div id="col-3-5" class="col-3-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>5</span>
-                                        </div>
+                                        <span>5</span>
                                     </div>
                                     <div id="col-3-2" class="col-3-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>2</span>
-                                        </div>
+                                        <span>2</span>
                                     </div>
                                     <div id="col-3-period" class="col-3-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>.</span>
-                                        </div>
+                                        <span>.</span>
                                     </div>
                                 </div>
                                 <div id="col-4">
                                     <div id="col-4-backspace" class="col-4-btn">
-                                        <div class="btn-padding">
-                                            <span><==</span>
-                                        </div>
+                                        <span><==</span>
                                     </div>
                                     <div id="col-4-t" class="col-4-btn">
-                                        <div class="btn-padding">
-                                            <span>T</span>
-                                        </div>
+                                        <span>T</span>
                                     </div>
                                     <div id="col-4-apostrophy" class="col-4-btn">
-                                        <div class="btn-padding">
-                                            <span>'</span>
-                                        </div>
+                                        <span>'</span>
                                     </div>
                                     <div id="col-4-9" class="col-4-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>9</span>
-                                        </div>
+                                        <span>9</span>
                                     </div>
                                     <div id="col-4-6" class="col-4-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>6</span>
-                                        </div>
+                                        <span>6</span>
                                     </div>
                                     <div id="col-4-3" class="col-4-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>3</span>
-                                        </div>
+                                        <span>3</span>
                                     </div>
                                     <div id="col-4-negative" class="col-4-btn-blk">
-                                        <div class="btn-padding">
-                                            <span>(-)</span>
-                                        </div>
+                                        <span>(-)</span>
                                     </div>
                                 </div>
                                 <div id="col-5">
                                     <div id="col-5-clear" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>CLEAR</span>
-                                        </div>
+                                        <span>CLEAR</span>
                                     </div>
                                     <div id="col-5-carrot" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>^</span>
-                                        </div>
+                                        <span>^</span>
                                     </div>
                                     <div id="col-5-div" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>÷</span>
-                                        </div>
+                                        <span>÷</span>
                                     </div>
                                     <div id="col-5-mult" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>×</span>
-                                        </div>
+                                        <span>×</span>
                                     </div>
                                     <div id="col-5-minus" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>−</span>
-                                        </div>
+                                        <span>−</span>
                                     </div>
                                     <div id="col-5-plus" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>+</span>
-                                        </div>
+                                        <span>+</span>
                                     </div>
                                     <div id="col-5-enter" class="col-5-btn">
-                                        <div class="btn-padding">
-                                            <span>ENTER</span>
-                                        </div>
+                                        <span>ENTER</span>
                                     </div>
                                 </div>
                             </div>

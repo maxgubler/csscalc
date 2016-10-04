@@ -198,23 +198,9 @@ html, body{
 }
 #columns span {
     position: absolute;
-/* flexbox
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    */
-}
-.btn-padding {
-    padding-top: 20%;
-    padding-bottom: 20%;
-    display: block;
-    position: relative;
-    
-    /* flexbox */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0px;
+    right: 0px;
+    line-height: 0%;
 }
 #col-1, #col-2, #col-3, #col-4, #col-5{
     position: relative;
@@ -242,20 +228,41 @@ html, body{
     margin-left: 2.5%;
 }
 .col-1-btn, .col-2-btn, .col-3-btn, .col-4-btn, .col-5-btn {
-    width: 100%;
-}
-.col-1-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
     background: #717171;
     border-radius: 30% / 100%;
     box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
+    color: #dddddd;
     cursor: pointer;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-bottom: 30%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+    width: 100%;
+}
+.col-2-btn-blk, .col-3-btn-blk, .col-4-btn-blk {
+    background: #222222;
+    color: #dddddd;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 30%;
+    padding-top: 26%;
+    padding-bottom: 26%;
+    text-align: center;
+}
+.col-2-btn-blk {
+    border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+}
+.col-3-btn-blk {
+    border-radius: 15%;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+}
+.col-4-btn-blk {
+    border-radius: 15% 25% 25% 15% / 15% 50% 50% 15%;
+    box-shadow: -0.3px 0.15px 1px 0px #383838;
 }
 #col-1-second {
     background: #37a1cc;
@@ -266,47 +273,9 @@ html, body{
 }
 #col-1-on {
     border-radius: 40px 40px 50px 200px;
-    padding-top: 12%;
-    padding-bottom: 20%;
+    padding-top: 30%;
+    padding-bottom: 50%;
     padding-left: 5%;
-}
-.col-2-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
-.col-2-btn {
-    margin-bottom: 30%;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
-.col-2-btn-blk {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.9em;
-    font-weight: bold;
-    
-    padding-top: 6%;
-    padding-bottom: 6%;
-    
-    background: #222222;
-    border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
-    box-shadow: 0.3px 0.15px 1px 0px #383838;
-    
-    cursor: pointer;
 }
 #col-2-shift .btn-padding {
     border-radius: 30% / 100%;
@@ -315,35 +284,6 @@ html, body{
 #col-2-alpha {
     background: #cccccc;
     color: #505050;
-}
-.col-3-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
-.col-3-btn-blk {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.9em;
-    font-weight: bold;
-    
-    padding-top: 6%;
-    padding-bottom: 6%;
-    background: #222222;
-    
-    border-radius: 15%;
-    box-shadow: 0.3px 0.15px 1px 0px #383838;
-    
-    cursor: pointer;
 }
 #col-3-esc {
     background: #222222;
@@ -362,51 +302,9 @@ html, body{
     -webkit-transform:scale(0.9,1);
     transform:scale(0.9,1);
 }
-.col-4-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
-.col-4-btn-blk {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.9em;
-    font-weight: bold;
-    
-    padding-top: 6%;
-    padding-bottom: 6%;
-    
-    background: #222222;
-    border-radius: 15% 25% 25% 15% / 15% 50% 50% 15%;
-    box-shadow: -0.3px 0.15px 1px 0px #383838;
-    
-    cursor: pointer;
-}
-.col-5-btn {
-    margin-bottom: 30%;
-    text-align: center;
-    color: #dddddd;
-    font-size: 0.5em;
-    font-weight: bold;
-    
-    background: #717171;
-    border-radius: 30% / 100%;
-    box-shadow: 0.3px 0.15px 2px 1px #333333;
-    
-    cursor: pointer;
-}
 #col-5-enter {
     border-radius: 40px 40px 200px 50px;
-    padding-top: 12%;
-    padding-bottom: 20%;
+    padding-top: 30%;
+    padding-bottom: 50%;
     padding-right: 5%;
 }
