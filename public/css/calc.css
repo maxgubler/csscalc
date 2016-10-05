@@ -6,10 +6,14 @@ html, body{
     position: relative;
     width: 50%;
 }
+#outer-wrap {
+    position: relative;
+    height: 100%;
+}
 #calc-outer {
     position: relative;
-    width: 50%;
-    padding-bottom: 100%;
+    height: 100%;
+    margin: 0 auto;
     
     background: #111111;
     -moz-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
