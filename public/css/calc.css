@@ -137,6 +137,7 @@ html, body{
     right: 0px;
 }
 #arrow-group {
+    box-sizing: border-box;
     margin-top: 3%;
     padding-right: 14%;
     position: absolute;
