@@ -16,10 +16,8 @@ html, body{
     margin: 0 auto;
     min-height: 480px;
     min-width: 240px;
-    /*test*/
     max-height: 585px;
     max-width: 292.5px;
-    /*test*/
     
     background: #111111;
     -moz-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
