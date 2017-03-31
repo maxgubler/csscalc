@@ -22,14 +22,13 @@ html, body{
     /*test*/
     
     background: #111111;
-    /*-moz-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
-    -webkit-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
-    border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;*/
-    /*test*/
     -moz-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
     -webkit-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
     border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
-    /*test*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #inner-wrap {
     position: absolute;
@@ -48,9 +47,13 @@ html, body{
     right: 0;
     
     background: #777777;
-    -moz-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
-    -webkit-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
-    border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
+    -moz-border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    -webkit-border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 96%;
     height: 96%;
     margin: 3% 2%;
@@ -63,6 +66,10 @@ html, body{
     background: radial-gradient(ellipse at center, rgb(112, 112, 112) 25%,rgb(133, 133, 133) 65%,rgba(0,0,0,0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 97%;
     border-radius: 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #calc-screen {
     position: relative;
