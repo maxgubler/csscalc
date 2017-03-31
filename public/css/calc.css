@@ -2,50 +2,31 @@ html, body{
     height: 100%;
     font-size: 100%;
 }
-/*.wrapper{
-    position: relative;
-    width: 15%;
-    overflow: hidden;
-    background: #ffffff;
-    margin: auto;
-}
-.wrapper:before{
-    content: "";
-    display: block;
-    padding-top: 200%;
-}
-.wrapper-content{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    color: #ffffff;
-}
-.wrapper-content div {
-   display: table;
-   width: 100%;
-   height: 100%;
-}
-.wrapper-content span {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    color: #ffffff;
-}*/
 #col-half {
     position: relative;
     width: 50%;
 }
+#outer-wrap {
+    position: relative;
+    height: 100%;
+}
 #calc-outer {
     position: relative;
-    width: 50%;
-    padding-bottom: 100%;
+    height: 100%;
+    margin: 0 auto;
+    min-height: 480px;
+    min-width: 240px;
+    max-height: 585px;
+    max-width: 292.5px;
     
     background: #111111;
-    -moz-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
-    -webkit-border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
-    border-radius: 100px 100px 75px 75px / 20px 20px 85px 85px;
+    -moz-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
+    -webkit-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
+    border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #inner-wrap {
     position: absolute;
@@ -64,14 +45,29 @@ html, body{
     right: 0;
     
     background: #777777;
-    -moz-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
-    -webkit-border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
-    border-radius: 75px 75px 100px 100px / 75px 75px 135px 135px;
+    -moz-border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    -webkit-border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    border-radius: 25% 25% 35% 35% / 14% 14% 25% 25%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 96%;
     height: 96%;
     margin: 3% 2%;
     
     box-shadow: inset 0px 0px 12px 6px rgba(0,0,0,0.2);
+}
+#calc-inner-gradient {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%, rgba(133, 133, 133, 1) 65%, rgba(0,0,0,0) 70%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%,rgba(133, 133, 133, 1) 65%,rgba(0,0,0,0) 70%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgb(112, 112, 112) 25%,rgb(133, 133, 133) 65%,rgba(0,0,0,0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 97%;
+    border-radius: 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #calc-screen {
     position: relative;
@@ -110,23 +106,15 @@ html, body{
 }
 #fbutton-group {
     position: relative;
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .fbutton {
     position: relative;
     display: inline-block;
     padding: 5%;
-    margin: 4%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2.5%;
     
     border-radius: 100%;
     background: #717171;
@@ -139,13 +127,211 @@ html, body{
     cursor: pointer;
 }
 .fbutton span {
-    position: absolute;
-    /*top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;*/
     color: #dddddd;
-    
     font-size: 0.75em;
     font-weight: bold;
+    line-height: 0%;
+    
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+#arrow-group {
+    margin-top: 3%;
+    padding-right: 14%;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    height: 5%;
+}
+.arrow {
+position: relative;
+    display: inline-block;
+    padding: 5.5%;
+    border-radius: 100%;
+    background: #222222;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: -3%;
+    z-index: 1337;
+}
+.arrow span {
+    color: #dddddd;
+    font-size: 0.75em;
+    font-weight: bold;
+    line-height: 0%;
+    
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+}
+#arrow-updown {
+    width: 10%;
+    height: 100%;
+    background: #222222;
+    border-radius: 0px;
+    padding: 0px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -3%;
+}
+
+#arrow-updown:before{
+    background: #777777;
+    height: inherit;
+    width: 23%;
+    border-radius: 0 90% 90% 0 / 0 50% 50% 0;
+    content: '';
+    position: relative;
+    float: left;
+    border: 1px solid #777777;
+}
+
+#arrow-updown:after{
+    background: #777777;
+    height: inherit;
+    width: 23%;
+    border-radius: 90% 0 0 90% / 50% 0 0 50%;
+    content: '';
+    position: relative;
+    float: right;
+    border: 1px solid #777777;
+}
+#arrow-up {
+    padding: 55%;
+    position: absolute;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: -88%;
+    margin-left: -5%;
+}
+#arrow-down {
+    padding: 55%;
+    position: absolute;
+    border-radius: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: -88%;
+    margin-left: -5%;
+}
+#columns {
+    margin-top: 5%;
+    color: #dddddd;
+}
+#columns span {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    line-height: 0%;
+}
+#col-1, #col-2, #col-3, #col-4, #col-5{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 13%;
+}
+#col-1 {
+    margin-left: 9.4%;
+}
+#col-2 {
+    margin-top: 0.2%;
+    margin-left: 2.5%;
+}
+#col-3 {
+    margin-top: 0.5%;
+    margin-left: 2.5%;
+}
+#col-4 {
+    margin-top: 18.4%;
+    margin-left: 2.5%;
+}
+#col-5 {
+    margin-top: 18.2%;
+    margin-left: 2.5%;
+}
+.col-1-btn, .col-2-btn, .col-3-btn, .col-4-btn, .col-5-btn {
+    background: #717171;
+    border-radius: 30% / 100%;
+    box-shadow: 0.3px 0.15px 2px 1px #333333;
+    color: #dddddd;
+    cursor: pointer;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-bottom: 30%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+    width: 100%;
+}
+.col-2-btn-blk, .col-3-btn-blk, .col-4-btn-blk {
+    background: #222222;
+    color: #dddddd;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 30%;
+    padding-top: 26%;
+    padding-bottom: 26%;
+    text-align: center;
+}
+.col-2-btn-blk {
+    border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+}
+.col-3-btn-blk {
+    border-radius: 15%;
+    box-shadow: 0.3px 0.15px 1px 0px #383838;
+}
+.col-4-btn-blk {
+    border-radius: 15% 25% 25% 15% / 15% 50% 50% 15%;
+    box-shadow: -0.3px 0.15px 1px 0px #383838;
+}
+#col-1-second {
+    background: #37a1cc;
+}
+#col-1-diamond {
+    background: #b5ca96;
+    color: black;
+}
+#col-1-on {
+    border-radius: 40px 40px 50px 200px;
+    padding-top: 30%;
+    padding-bottom: 50%;
+    padding-left: 5%;
+}
+#col-2-shift .btn-padding {
+    border-radius: 30% / 100%;
+    box-shadow: inset 0 0 0px 1px #bbbbbb;
+}
+#col-2-alpha {
+    background: #cccccc;
+    color: #505050;
+}
+#col-3-esc {
+    background: #222222;
+}
+#col-3-apps {
+    background: #222222;
+    color: #713e89;
+}
+#col-3-cat {
+    letter-spacing: -0.05em;
+}
+#col-3-cat span {
+    -ms-transform:scale(0.9,1);
+    -o-transform:scale(0.9,1);
+    -moz-transfor:scale(0.9,1);
+    -webkit-transform:scale(0.9,1);
+    transform:scale(0.9,1);
+}
+#col-5-enter {
+    border-radius: 40px 40px 200px 50px;
+    padding-top: 30%;
+    padding-bottom: 50%;
+    padding-right: 5%;
 }
