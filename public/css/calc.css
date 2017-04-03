@@ -90,7 +90,8 @@ html, body{
     position: absolute;
     bottom: 0;
     
-    font-family: monospace;
+    font-family: monospace, monospace;
+    font-size: 0.75em;
 }
 #calc-screen-shadow-top {
     position: relative;
