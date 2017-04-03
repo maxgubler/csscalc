@@ -89,6 +89,8 @@ html, body{
 #calc-screen-text-entry {
     position: absolute;
     bottom: 0;
+    
+    font-family: monospace;
 }
 #calc-screen-shadow-top {
     position: relative;
