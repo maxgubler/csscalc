@@ -89,6 +89,11 @@ html, body{
 #calc-screen-text-entry {
     position: absolute;
     bottom: 0;
+    width: 100%;
+    z-index: 999;
+    
+    background-color: transparent;
+    border: none;
     
     font-family: monospace, monospace;
     font-size: 0.75em;
