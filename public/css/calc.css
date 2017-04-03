@@ -1,6 +1,7 @@
 html, body{
     height: 100%;
     font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #col-half {
     position: relative;
@@ -137,6 +138,7 @@ html, body{
     right: 0px;
 }
 #arrow-group {
+    box-sizing: border-box;
     margin-top: 3%;
     padding-right: 14%;
     position: absolute;
