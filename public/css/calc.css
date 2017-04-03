@@ -86,6 +86,10 @@ html, body{
     margin-right: auto;
     width: 80%;
 }
+#calc-screen-text-entry {
+    position: absolute;
+    bottom: 0;
+}
 #calc-screen-shadow-top {
     position: relative;
     background: transparent;
