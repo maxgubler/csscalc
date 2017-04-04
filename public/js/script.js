@@ -100,11 +100,7 @@ $(function(){
 
     
     // KEYS
-    if ($(inputID)[0] === document.activeElement) {
-        console.log(true);
-    }
-    else 
-    
+
     // Enter / Return
     $(window).keypress(function (e) {
         if (e.which === 13) {
