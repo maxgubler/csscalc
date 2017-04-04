@@ -159,4 +159,11 @@ $(function(){
             backspace();
         } 
     });
+    
+    // Arrow Up / Down
+    $(inputID).keydown(function(e) {
+        if (e.which === 38 || e.which === 40) {
+            e.preventDefault();
+        }
+    });
 });
