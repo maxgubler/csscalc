@@ -110,6 +110,13 @@ $(function(){
     buttonPress('-', '#col-5-minus');
     buttonPress('+', '#col-5-plus');
     buttonPress('.', '#col-3-period');
+    buttonPress('^', '#col-5-carrot');
+    
+    // Common variable letters
+    buttonPress('x', '#col-1-x');
+    buttonPress('y', '#col-2-y');
+    buttonPress('z', '#col-3-z');
+    buttonPress('t', '#col-4-t');
     
     // Enter
     $('#col-5-enter').click(function() {
