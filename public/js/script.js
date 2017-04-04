@@ -100,17 +100,28 @@ $(function(){
 
     
     // KEYS
-    // TEST: Need to limit allowed keys
     $(inputID).keypress(function(e) {
-       var char = String.fromCharCode(e.which);
-       insert(char);
+        // Acceptable charCodes
+        // ( ) * + , - . / : 40-47
+        // 0-9 : 48-57
+        // = : 61
+        // ^ : 94
+        // a-z : 97-122
+        // A-Z : 65-90
+        var cc = e.which;
+        if ((cc >= 40 && cc <= 57) || cc === 61 || cc === 94 || cc === 94 || (cc >= 97 && cc <= 122) || (cc >= 65 && cc <= 90)) {
+            var char = String.fromCharCode(cc);
+            return insert(char);
+        }
+        return;
     });
     
     // Enter / Return
     $(inputID).keypress(function(e) {
         if (e.which === 13) {
             e.preventDefault();
-            evaluate();
+            return evaluate();
         }
+        return;
     });
 });
