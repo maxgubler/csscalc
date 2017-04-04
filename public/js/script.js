@@ -100,9 +100,14 @@ $(function(){
 
     
     // KEYS
-
+    // TEST: Need to limit allowed keys
+    $(inputID).keypress(function(e) {
+       var char = String.fromCharCode(e.which);
+       type(char);
+    });
+    
     // Enter / Return
-    $(window).keypress(function (e) {
+    $(inputID).keypress(function(e) {
         if (e.which === 13) {
             e.preventDefault();
             evaluate();
