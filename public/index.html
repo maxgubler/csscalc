@@ -6,18 +6,17 @@
         
         <script>
             (function(){
+                // Fix path for gh-pages
                 var pathname = window.location.pathname;
-                console.log(pathname);
+                pathname.replace("index.html", "");
+                document.write('<script src="' + pathname + 'js/jquery-3.1.0.min.js"><\/script>');
+                document.write('<script src="' + pathname + 'js/math.js"><\/script>');
+                document.write('<script src="' + pathname + 'js/script.js"><\/script>');
+                document.write('<link href="' + pathname + 'css/minireset.min.css" rel="stylesheet">');
+                document.write('<link href="' + pathname + 'css/normalize.css" rel="stylesheet">');
+                document.write('<link href="' + pathname + 'css/calc.css" rel="stylesheet">');
             })();
         </script>
-        
-        <script src="/js/jquery-3.1.0.min.js"></script>
-        <script src="/js/math.js"></script>
-        <script src="/js/script.js"></script>
-        
-        <link href="/css/minireset.min.css" rel="stylesheet">
-        <link href="/css/normalize.css" rel="stylesheet">
-        <link href="/css/calc.css" rel="stylesheet">
         
         <title>MX-89 Titanium</title>
     </head>
