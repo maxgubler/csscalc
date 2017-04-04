@@ -19,24 +19,39 @@ $(function(){
     };
     
     // MISC
-    entryFocus = function() {
-        $(inputID).focus();
+    entryFocus = function(cPos) {
+        if (!cPos) {
+            $(inputID).focus();
+        }
+        else {
+            $(inputID)[0].selectionStart = cPos;
+            $(inputID)[0].selectionEnd = cPos;
+            $(inputID).focus();
+        }
     };
     
     type = function(val, id) {
         $(id).click(function(){
+            var cPos = $(inputID)[0].selectionStart;
             var entry = $(inputID).val();
-            entry += val;
+            
+            if (cPos == entry.length) {
+                // append value to end of current string
+                entry += val;
+            }
+            else {
+                // split current string entry and insert new value
+                var start = entry.slice(0, cPos);
+                var end = entry.slice(cPos, entry.length);
+                entry = start + val + end;
+            }
+            // replace input value with new entry
             $(inputID).val(entry);
-            entryFocus();
+            
+            // advance cursor right and focus input
+            entryFocus(cPos + 1);
         });
     };
-    
-    // Test: Display input cursor position in console
-    $(inputID).click(function(){
-        var cPos = $(inputID)[0].selectionStart;
-        console.log(cPos);
-    });
 
 
     // BUTTONS
