@@ -6,7 +6,7 @@ $(function(){
     $('#calc-outer').css('width', $('#calc-outer').height() / 2);
     $(window).resize(function() {
         var h = $('#calc-outer').height();
-        $('#calc-outer').width( h / 2);
+        $('#calc-outer').width(h / 2);
     });
     
     // MATH
@@ -20,10 +20,13 @@ $(function(){
     
     // MISC
     entryFocus = function(cPos) {
+        // cPos is the desired cursor position
+        // if not specified, cursor position defaults to the end on focus
         if (!cPos) {
             $(inputID).focus();
         }
         else {
+            // move cursor to new position
             $(inputID)[0].selectionStart = cPos;
             $(inputID)[0].selectionEnd = cPos;
             $(inputID).focus();
@@ -48,7 +51,7 @@ $(function(){
             // replace input value with new entry
             $(inputID).val(entry);
             
-            // advance cursor right and focus input
+            // advance cursor position and focus input
             entryFocus(cPos + 1);
         });
     };
