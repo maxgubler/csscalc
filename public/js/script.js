@@ -29,7 +29,7 @@ $(function(){
             $(inputID).focus();
         }
         else {
-            // move cursor to new position
+            // move cursor to desired position
             $(inputID)[0].selectionStart = cPos;
             $(inputID)[0].selectionEnd = cPos;
             $(inputID).focus();
@@ -201,4 +201,10 @@ $(function(){
             e.preventDefault();
         }
     });
+    
+    
+    
+    // On document load set input to readonly and focus
+    $(inputID).attr('readonly','readonly');
+    entryFocus();
 });
