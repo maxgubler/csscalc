@@ -182,11 +182,17 @@ $(function(){
     });
     
     // Backspace
-    $(inputID).keypress(function(e) {
+    $(inputID).keydown(function(e) {
         if (e.which === 8) {
             e.preventDefault();
             backspace();
         } 
+    });
+    // Prevent backspace from acting as browser back button
+    $(window).keydown(function(e) {
+        if (e.which === 8) {
+            e.preventDefault();
+        }
     });
     
     // Arrow Up / Down
