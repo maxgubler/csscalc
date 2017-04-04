@@ -127,6 +127,28 @@ $(function(){
         backspace(); 
     });
     
+    // Arrow Left
+    $('#arrow-left').click(function() {
+        var cPos = $(inputID)[0].selectionStart;
+        if (cPos != 0) {
+            entryFocus(cPos - 1);
+        }
+        else {
+            entryFocus(cPos);
+        }
+    });
+    
+    // Arrow Right
+    $('#arrow-right').click(function() {
+        var cPos = $(inputID)[0].selectionStart;
+        if (cPos != $(inputID).val().length) {
+            entryFocus(cPos + 1);
+        }
+        else {
+            entryFocus(cPos);
+        }
+    });
+    
     
     // KEYS
     $(inputID).keypress(function(e) {
