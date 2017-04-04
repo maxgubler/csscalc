@@ -1,5 +1,6 @@
 $(function(){
     var evaluate, entryFocus, type;
+    var inputID = '#calc-screen-text-entry';
     
     // RESIZE
     $('#calc-outer').css('width', $('#calc-outer').height() / 2);
@@ -10,7 +11,7 @@ $(function(){
     
     // MATH
     evaluate = function() {
-        $('#calc-screen-text-entry').val(function(index, entry){
+        $(inputID).val(function(index, entry){
            var result = math.eval(entry);
            return result;
         });
@@ -19,17 +20,23 @@ $(function(){
     
     // MISC
     entryFocus = function() {
-        $('#calc-screen-text-entry').focus();
+        $(inputID).focus();
     };
     
     type = function(val, id) {
         $(id).click(function(){
-            var entry = $('#calc-screen-text-entry').val();
+            var entry = $(inputID).val();
             entry += val;
-            $('#calc-screen-text-entry').val(entry);
+            $(inputID).val(entry);
             entryFocus();
         });
     };
+    
+    // Test: Display input cursor position in console
+    $(inputID).click(function(){
+        var cPos = $(inputID)[0].selectionStart;
+        console.log(cPos);
+    });
 
 
     // BUTTONS
@@ -40,7 +47,7 @@ $(function(){
     
     // Clear
     $('#col-5-clear').click(function(){
-        $('#calc-screen-text-entry').val('');
+        $(inputID).val('');
         entryFocus();
     });
     
