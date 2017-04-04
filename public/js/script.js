@@ -1,6 +1,6 @@
 $(function(){
     // Decalare functions
-    var evaluate, entryFocus, type, buttonPress;
+    var evaluate, entryFocus, insert, buttonPress;
     
     // Set shorthand variable for selectors
     var inputID = '#calc-screen-text-entry';
@@ -36,7 +36,7 @@ $(function(){
         }
     };
     
-    type = function(val) {
+    insert = function(val) {
         var cPos = $(inputID)[0].selectionStart;
         var entry = $(inputID).val();
         
@@ -60,7 +60,7 @@ $(function(){
     // BUTTONS
     buttonPress = function(val, id) {
         $(id).click(function(){
-            type(val);
+            insert(val);
         });
     };
     
@@ -103,7 +103,7 @@ $(function(){
     // TEST: Need to limit allowed keys
     $(inputID).keypress(function(e) {
        var char = String.fromCharCode(e.which);
-       type(char);
+       insert(char);
     });
     
     // Enter / Return
