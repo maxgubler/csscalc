@@ -1,5 +1,8 @@
 $(function(){
-    var evaluate, entryFocus, type;
+    // Decalare functions
+    var evaluate, entryFocus, type, buttonPress;
+    
+    // Set shorthand variable for selectors
     var inputID = '#calc-screen-text-entry';
     
     // RESIZE
@@ -33,31 +36,57 @@ $(function(){
         }
     };
     
-    type = function(val, id) {
-        $(id).click(function(){
-            var cPos = $(inputID)[0].selectionStart;
-            var entry = $(inputID).val();
-            
-            if (cPos == entry.length) {
-                // append value to end of current string
-                entry += val;
-            }
-            else {
-                // split current string entry and insert new value
-                var start = entry.slice(0, cPos);
-                var end = entry.slice(cPos, entry.length);
-                entry = start + val + end;
-            }
-            // replace input value with new entry
-            $(inputID).val(entry);
-            
-            // advance cursor position and focus input
-            entryFocus(cPos + 1);
-        });
+    type = function(val) {
+        var cPos = $(inputID)[0].selectionStart;
+        var entry = $(inputID).val();
+        
+        if (cPos == entry.length) {
+            // append value to end of current string
+            entry += val;
+        }
+        else {
+            // split current string entry and insert new value
+            var start = entry.slice(0, cPos);
+            var end = entry.slice(cPos, entry.length);
+            entry = start + val + end;
+        }
+        // replace input value with new entry
+        $(inputID).val(entry);
+        
+        // advance cursor position and focus input
+        entryFocus(cPos + 1);
     };
 
-
     // BUTTONS
+    buttonPress = function(val, id) {
+        $(id).click(function(){
+            type(val);
+        });
+    };
+    
+    // Numbers
+    buttonPress('0', '#col-2-0');
+    buttonPress('1', '#col-2-1');
+    buttonPress('2', '#col-3-2');
+    buttonPress('3', '#col-4-3');
+    buttonPress('4', '#col-2-4');
+    buttonPress('5', '#col-3-5');
+    buttonPress('6', '#col-4-6');
+    buttonPress('7', '#col-2-7');
+    buttonPress('8', '#col-3-8');
+    buttonPress('9', '#col-4-9');
+    
+    // Symbols
+    buttonPress('=', '#col-1-equal');
+    buttonPress('(', '#col-2-leftpar');
+    buttonPress(')', '#col-3-rightpar');
+    buttonPress(',', '#col-4-comma');
+    buttonPress('/', '#col-5-div');
+    buttonPress('*', '#col-5-mult');
+    buttonPress('-', '#col-5-minus');
+    buttonPress('+', '#col-5-plus');
+    buttonPress('.', '#col-3-period');
+    
     // Enter
     $('#col-5-enter').click(function(){
         evaluate();
@@ -68,31 +97,14 @@ $(function(){
         $(inputID).val('');
         entryFocus();
     });
-    
-    // Numbers
-    type('0', '#col-2-0');
-    type('1', '#col-2-1');
-    type('2', '#col-3-2');
-    type('3', '#col-4-3');
-    type('4', '#col-2-4');
-    type('5', '#col-3-5');
-    type('6', '#col-4-6');
-    type('7', '#col-2-7');
-    type('8', '#col-3-8');
-    type('9', '#col-4-9');
-    
-    // Symbols
-    type('=', '#col-1-equal');
-    type('(', '#col-2-leftpar');
-    type(')', '#col-3-rightpar');
-    type(',', '#col-4-comma');
-    type('/', '#col-5-div');
-    type('*', '#col-5-mult');
-    type('-', '#col-5-minus');
-    type('+', '#col-5-plus');
-    type('.', '#col-3-period');
+
     
     // KEYS
+    if ($(inputID)[0] === document.activeElement) {
+        console.log(true);
+    }
+    else 
+    
     // Enter / Return
     $(window).keypress(function (e) {
         if (e.which === 13) {
