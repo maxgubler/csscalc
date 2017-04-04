@@ -1,6 +1,6 @@
 $(function(){
     // Decalare functions
-    var evaluate, entryFocus, insert, buttonPress;
+    var evaluate, entryFocus, insert, backspace, buttonPress;
     
     // Set shorthand variable for selectors
     var inputID = '#calc-screen-text-entry';
@@ -25,7 +25,7 @@ $(function(){
     entryFocus = function(cPos) {
         // cPos is the desired cursor position
         // if not specified, cursor position defaults to the end on focus
-        if (!cPos) {
+        if (!cPos && cPos !== 0) {
             $(inputID).focus();
         }
         else {
@@ -41,11 +41,11 @@ $(function(){
         var entry = $(inputID).val();
         
         if (cPos == entry.length) {
-            // append value to end of current string
+            // append value to end of string
             entry += val;
         }
         else {
-            // split current string entry and insert new value
+            // split string entry and insert new value
             var start = entry.slice(0, cPos);
             var end = entry.slice(cPos, entry.length);
             entry = start + val + end;
@@ -56,6 +56,30 @@ $(function(){
         // advance cursor position and focus input
         entryFocus(cPos + 1);
     };
+    
+    backspace = function() {
+        var cPos = $(inputID)[0].selectionStart;
+        var entry = $(inputID).val();
+        if (cPos == 0) {
+            return;
+        }
+        else if (cPos == entry.length) {
+            // trim last char from end of string
+            entry = entry.slice(0, cPos - 1);
+        }
+        else {
+            // trim char from end of the starting substring
+            var start = entry.slice(0, cPos - 1);
+            var end = entry.slice(cPos, entry.length);
+            entry = start + end;
+        }
+        // replace input value with new entry
+        $(inputID).val(entry);
+        
+        // decrement cursor position and focus input
+        entryFocus(cPos - 1);
+    };
+    
 
     // BUTTONS
     buttonPress = function(val, id) {
@@ -88,40 +112,51 @@ $(function(){
     buttonPress('.', '#col-3-period');
     
     // Enter
-    $('#col-5-enter').click(function(){
+    $('#col-5-enter').click(function() {
         evaluate();
     });
     
     // Clear
-    $('#col-5-clear').click(function(){
+    $('#col-5-clear').click(function() {
         $(inputID).val('');
         entryFocus();
     });
-
+    
+    // Backspace
+    $('#col-4-backspace').click(function() {
+        backspace(); 
+    });
+    
     
     // KEYS
     $(inputID).keypress(function(e) {
-        // Acceptable charCodes
+        // Acceptable codes
         // ( ) * + , - . / : 40-47
         // 0-9 : 48-57
         // = : 61
         // ^ : 94
         // a-z : 97-122
         // A-Z : 65-90
-        var cc = e.which;
-        if ((cc >= 40 && cc <= 57) || cc === 61 || cc === 94 || cc === 94 || (cc >= 97 && cc <= 122) || (cc >= 65 && cc <= 90)) {
-            var char = String.fromCharCode(cc);
-            return insert(char);
+        var key = e.which;
+        if ((key >= 40 && key <= 57) || key === 61 || key === 94 || key === 94 || (key >= 97 && key <= 122) || (key >= 65 && key <= 90)) {
+            var char = String.fromCharCode(key);
+            insert(char);
         }
-        return;
     });
     
     // Enter / Return
     $(inputID).keypress(function(e) {
         if (e.which === 13) {
             e.preventDefault();
-            return evaluate();
+            evaluate();
         }
-        return;
+    });
+    
+    // Backspace
+    $(inputID).keypress(function(e) {
+        if (e.which === 8) {
+            e.preventDefault();
+            backspace();
+        } 
     });
 });
