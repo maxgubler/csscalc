@@ -91,29 +91,26 @@ html, body{
     background-size: 100%;
 }
 #calc-screen-text-entry {
-    /*position: absolute;
-    bottom: 0;
+    position: relative;
+    display: block;
+    height: 100%;
     width: 100%;
-    z-index: 999;*/
+    padding: 0;
+    z-index: 999;
     
     background-color: transparent;
     border: none;
     
     font-family: monospace, monospace;
     font-size: 0.75em;
-    
-    /* Test */
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 100%;
-    padding: 0;
 }
 #calc-screen-shadow-top {
-    position: relative;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
     background: transparent;
     box-shadow: inset -2px 8px 6px rgba(0,0,0,0.3);
-    height: 100%;
 }
 #calc-screen-spacer {
     position: relative;
