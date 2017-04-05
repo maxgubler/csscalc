@@ -88,7 +88,7 @@ html, body{
     width: 80%;
     
     background-image: url("/ti-89t_display.png");
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 #calc-screen-tabs {
     height: 16%;
