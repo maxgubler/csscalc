@@ -90,6 +90,18 @@ html, body{
     background-image: url("/ti-89t_display.png");
     background-size: 100%;
 }
+#calc-screen-tabs {
+    height: 16%;
+}
+#calc-screen-history {
+    height: 67%;
+}
+#calc-screen-entry-div {
+    height: 11%;
+}
+#calc-screen-status {
+    height: 6%;
+}
 #calc-screen-text-entry {
     position: relative;
     display: block;
