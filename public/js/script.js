@@ -1,93 +1,22 @@
+var initialHeight;
+var inputID = '#calc-screen-text-entry';
+
 $(function(){
-    // Decalare functions
-    var evaluate, entryFocus, insert, backspace, buttonPress;
+    // SCALING
+    // Get initial height for use in resizing
+    initialHeight = $('#calc-outer').height();
     
-    // Set shorthand variable for selectors
-    var inputID = '#calc-screen-text-entry';
+    // Set height to fill window
+    $('#calc-outer').css('height', '100%');
     
-    // RESIZE
-    $('#calc-outer').css('width', $('#calc-outer').height() / 2);
+    // Resize and show calculator
+    resizeWidthAndFont();
+    $('#calc-outer').removeClass('hidden');
     $(window).resize(function() {
-        var h = $('#calc-outer').height();
-        $('#calc-outer').width(h / 2);
+        resizeWidthAndFont();
     });
-    
-    // MATH
-    evaluate = function() {
-        $(inputID).val(function(index, entry){
-           var result = math.eval(entry);
-           return result;
-        });
-        entryFocus();
-    };
-    
-    // MISC
-    entryFocus = function(cPos) {
-        // cPos is the desired cursor position
-        // if not specified, cursor position defaults to the end on focus
-        if (!cPos && cPos !== 0) {
-            $(inputID).focus();
-        }
-        else {
-            // move cursor to desired position
-            $(inputID)[0].selectionStart = cPos;
-            $(inputID)[0].selectionEnd = cPos;
-            $(inputID).focus();
-        }
-    };
-    
-    insert = function(val) {
-        var cPos = $(inputID)[0].selectionStart;
-        var entry = $(inputID).val();
-        
-        if (cPos == entry.length) {
-            // append value to end of string
-            entry += val;
-        }
-        else {
-            // split string entry and insert new value
-            var start = entry.slice(0, cPos);
-            var end = entry.slice(cPos, entry.length);
-            entry = start + val + end;
-        }
-        // replace input value with new entry
-        $(inputID).val(entry);
-        
-        // advance cursor position and focus input
-        entryFocus(cPos + 1);
-    };
-    
-    backspace = function() {
-        var cPos = $(inputID)[0].selectionStart;
-        var entry = $(inputID).val();
-        if (cPos == 0) {
-            return;
-        }
-        else if (cPos == entry.length) {
-            // trim last char from end of string
-            entry = entry.slice(0, cPos - 1);
-        }
-        else {
-            // trim char from end of the starting substring
-            var start = entry.slice(0, cPos - 1);
-            var end = entry.slice(cPos, entry.length);
-            entry = start + end;
-        }
-        // replace input value with new entry
-        $(inputID).val(entry);
-        
-        // decrement cursor position and focus input
-        entryFocus(cPos - 1);
-    };
-    
 
     // BUTTONS
-    buttonPress = function(val, id) {
-        $(id).click(function(){
-            insert(val);
-        });
-    };
-    
     // Numbers
     buttonPress('0', '#col-2-0');
     buttonPress('1', '#col-2-1');
@@ -208,3 +137,79 @@ $(function(){
     $(inputID).attr('readonly','readonly');
     entryFocus();
 });
+
+
+
+function resizeWidthAndFont() {
+    var h = $('#calc-outer').height();
+    var newHeight = (h / initialHeight * 100);
+    $('#calc-outer').css('width', h / 2);
+    $('body').css('font-size', newHeight + '%');
+}
+function evaluate() {
+    $(inputID).val(function(index, entry){
+       var result = math.eval(entry);
+       return result;
+    });
+    entryFocus();
+}
+function entryFocus(cPos) {
+    // cPos is the desired cursor position
+    // if not specified, cursor position defaults to the end on focus
+    if (!cPos && cPos !== 0) {
+        $(inputID).focus();
+    }
+    else {
+        // move cursor to desired position
+        $(inputID)[0].selectionStart = cPos;
+        $(inputID)[0].selectionEnd = cPos;
+        $(inputID).focus();
+    }
+}
+function insert(val) {
+    var cPos = $(inputID)[0].selectionStart;
+    var entry = $(inputID).val();
+    
+    if (cPos == entry.length) {
+        // append value to end of string
+        entry += val;
+    }
+    else {
+        // split string entry and insert new value
+        var start = entry.slice(0, cPos);
+        var end = entry.slice(cPos, entry.length);
+        entry = start + val + end;
+    }
+    // replace input value with new entry
+    $(inputID).val(entry);
+    
+    // advance cursor position and focus input
+    entryFocus(cPos + 1);
+}
+function backspace() {
+    var cPos = $(inputID)[0].selectionStart;
+    var entry = $(inputID).val();
+    if (cPos == 0) {
+        return;
+    }
+    else if (cPos == entry.length) {
+        // trim last char from end of string
+        entry = entry.slice(0, cPos - 1);
+    }
+    else {
+        // trim char from end of the starting substring
+        var start = entry.slice(0, cPos - 1);
+        var end = entry.slice(cPos, entry.length);
+        entry = start + end;
+    }
+    // replace input value with new entry
+    $(inputID).val(entry);
+    
+    // decrement cursor position and focus input
+    entryFocus(cPos - 1);
+}
+function buttonPress(val, id) {
+    $(id).click(function(){
+        insert(val);
+    });
+}
