@@ -92,7 +92,17 @@ html, body{
 }
 #calc-screen-tabs {
     height: 16%;
+    display: flex;
     border-bottom: 1px solid #000000;
+}
+#calc-screen-tabs div {
+    height: 100%;
+    flex-grow: 1;
+    font-family: monospace, monospace;
+    font-size: 7px;
+    text-align: center;
+    padding: 1px;
+    border-left: 1px solid black;
 }
 #calc-screen-history {
     height: 67%;
