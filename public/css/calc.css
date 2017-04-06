@@ -13,12 +13,11 @@ html, body{
 }
 #calc-outer {
     position: relative;
+    width: 240px;
     height: 100%;
-    margin: 0 auto;
     min-height: 480px;
     min-width: 240px;
-    max-height: 585px;
-    max-width: 292.5px;
+    margin: 0 auto;
     
     background: #111111;
     -moz-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
