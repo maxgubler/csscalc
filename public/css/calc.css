@@ -93,7 +93,6 @@ html, body{
 #calc-screen-tabs {
     height: 16%;
     display: flex;
-    border-bottom: 1px solid #000000;
 }
 #calc-screen-tabs div {
     height: 100%;
@@ -102,7 +101,13 @@ html, body{
     font-size: 7px;
     text-align: center;
     padding: 1px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     border-left: 1px solid black;
+    border-radius: 10% 10% 0% 0% / 15% 15% 0% 0%;
+}
+#tab-empty {
+    flex-basis: 10%;
 }
 #calc-screen-history {
     height: 67%;
