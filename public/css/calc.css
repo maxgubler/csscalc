@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'pixelized';
+    src: url('/font/pixelized.woff2') format('woff2'),
+         url('/font/pixelized.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 .hidden {
     visibility: hidden;
 }
@@ -98,17 +106,22 @@ html, body{
 }
 #calc-screen-tabs div {
     height: 100%;
+    min-width: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     flex-grow: 1;
-    font-family: monospace, monospace;
-    font-size: 0.45em;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
-    padding: 1px;
+    padding-right: 2px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-radius: 10% 10% 0% 0% / 15% 15% 0% 0%;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.49em;
+    letter-spacing: -0.3em;
+    line-height: 0.9;
 }
 #tab-empty {
     flex-basis: 10%;
