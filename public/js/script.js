@@ -15,6 +15,7 @@ $(function(){
         $('body').css('font-size', newHeight + '%');
     };
     resizeWidthAndFont();
+    $('#calc-outer').removeClass('hidden');
     $(window).resize(function() {
         resizeWidthAndFont();
     });
