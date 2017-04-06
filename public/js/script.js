@@ -1,15 +1,22 @@
 $(function(){
-    // Decalare functions
-    var evaluate, entryFocus, insert, backspace, buttonPress;
-    
-    // Set shorthand variable for selectors
+    var resizeWidthAndFont, evaluate, entryFocus, insert, backspace, buttonPress;
     var inputID = '#calc-screen-text-entry';
     
-    // RESIZE
-    $('#calc-outer').css('width', $('#calc-outer').height() / 2);
-    $(window).resize(function() {
+    // SCALING
+    // Get initial height for use in resizing
+    var initialHeight = $('#calc-outer').height();
+    // Set height to fill window
+    $('#calc-outer').css('height', '100%');
+
+    resizeWidthAndFont = function() {
         var h = $('#calc-outer').height();
-        $('#calc-outer').width(h / 2);
+        var newHeight = (h / initialHeight * 100);
+        $('#calc-outer').css('width', h / 2);
+        $('body').css('font-size', newHeight + '%');
+    };
+    resizeWidthAndFont();
+    $(window).resize(function() {
+        resizeWidthAndFont();
     });
     
     // MATH
