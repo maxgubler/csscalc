@@ -1,5 +1,6 @@
 var initialHeight;
 var inputID = '#calc-screen-text-entry';
+var calcHistory = [];
 
 $(function(){
     // SCALING
@@ -146,10 +147,17 @@ function resizeWidthAndFont() {
     $('#calc-outer').css('width', h / 2);
     $('body').css('font-size', newHeight + '%');
 }
+function recordHistory(ent, res) {
+	// create local data object and push it to the history array
+	var data = {entry:ent, result:res};
+	calcHistory.push(data);
+}
 function evaluate() {
     $(inputID).val(function(index, entry){
        var result = math.eval(entry);
-       return result;
+       recordHistory(entry, result);
+       console.log(calcHistory);
+       return entry;
     });
     entryFocus();
 }
