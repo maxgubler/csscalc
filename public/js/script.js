@@ -152,13 +152,21 @@ function recordHistory(ent, res) {
 	var data = {entry:ent, result:res};
 	calcHistory.push(data);
 }
+function displayHistory() {
+    var numStored = calcHistory.length;
+    var htmlList = '';
+    for (var i = 0; i < numStored; i++) {
+        htmlList += '<li id=hist' + i + '><div>' + calcHistory[i].entry + '</div><div>' + calcHistory[i].result + '</div></li>';
+    }
+    $('#calc-screen-history ul').html(htmlList);
+}
 function evaluate() {
     $(inputID).val(function(index, entry){
-       var result = math.eval(entry);
+       var result = math.eval(entry).toString();
        recordHistory(entry, result);
-       console.log(calcHistory);
        return entry;
     });
+    displayHistory();
     entryFocus();
 }
 function entryFocus(cPos) {
