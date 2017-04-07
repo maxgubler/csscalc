@@ -175,10 +175,11 @@ html, body{
     background-color: transparent;
     border: none;
     
-    font-family: monospace, monospace;
-    font-size: 0.75em;
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
     
-    padding: 0.1em 0.3em 0em 0.3em;
+    padding: 0em 0.3em 0em 0.3em;
 }
 #calc-screen-shadow-top {
     position: absolute;
