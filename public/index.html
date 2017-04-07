@@ -5,23 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <script src="/js/jquery-3.1.0.min.js"></script>
+        <script src="/js/math.js"></script>
         <script src="/js/script.js"></script>
         
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" rel="stylesheet">
+        <link href="/css/minireset.min.css" rel="stylesheet">
+        <link href="/css/normalize.css" rel="stylesheet">
         <link href="/css/calc.css" rel="stylesheet">
         
         <title>MX-89 Titanium</title>
     </head>
     <body>
         <div id="outer-wrap">
-            <div id="calc-outer">
+            <div id="calc-outer" class="hidden">
                 <div id="inner-wrap">
                     <div id="calc-inner">
                         <div id="calc-inner-gradient"></div>
                     </div>
                     <div id="calc-screen">
-                        <div id="calc-screen-shadow-top">
+                        <div id="calc-screen-tabs">
+                            <div id="tab-f1">F1<br>Tools</div>
+                            <div id="tab-f2">F2<br>Algebra</div>
+                            <div id="tab-f3">F3<br>Calc</div>
+                            <div id="tab-f4">F4<br>Other</div>
+                            <div id="tab-f5">F5<br>PrgmID</div>
+                            <div id="tab-f6">F6<br>Clean Up</div>
+                            <div id="tab-empty"></div>
                         </div>
+                        <div id="calc-screen-history">
+                            <ul>
+                            </ul>
+                        </div>
+                        <div id="calc-screen-entry-div"><input id="calc-screen-text-entry" value="" readonly="readonly" type="text"></div>
+                        <div id="calc-screen-status"></div>
+                        <div id="calc-screen-shadow-top"></div>
                     </div>
                     <div id="calc-screen-spacer">
                     </div>
@@ -135,8 +151,8 @@
                             <div id="col-4-t" class="col-4-btn">
                                 <span>T</span>
                             </div>
-                            <div id="col-4-apostrophy" class="col-4-btn">
-                                <span>'</span>
+                            <div id="col-4-comma" class="col-4-btn">
+                                <span>,</span>
                             </div>
                             <div id="col-4-9" class="col-4-btn-blk">
                                 <span>9</span>

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'pixelized';
+    src: url('/font/pixelized.woff2') format('woff2'),
+         url('/font/pixelized.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.hidden {
+    visibility: hidden;
+}
 html, body{
     height: 100%;
     font-size: 100%;
@@ -13,12 +24,11 @@ html, body{
 }
 #calc-outer {
     position: relative;
-    height: 100%;
-    margin: 0 auto;
+    width: 240px;
+    height: 480px;
     min-height: 480px;
     min-width: 240px;
-    max-height: 585px;
-    max-width: 292.5px;
+    margin: 0 auto;
     
     background: #111111;
     -moz-border-radius: 57% 57% 30% 30% / 4% 4% 17% 17%;
@@ -60,10 +70,11 @@ html, body{
     box-shadow: inset 0px 0px 12px 6px rgba(0,0,0,0.2);
 }
 #calc-inner-gradient {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%, rgba(133, 133, 133, 1) 65%, rgba(0,0,0,0) 70%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 25%,rgba(133, 133, 133, 1) 65%,rgba(0,0,0,0) 70%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgb(112, 112, 112) 25%,rgb(133, 133, 133) 65%,rgba(0,0,0,0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    height: 97%;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 30%,rgba(133, 133, 133, 1) 62%,rgba(117, 117, 117, 0) 70%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(112, 112, 112, 1) 30%,rgba(133, 133, 133, 1) 62%,rgba(117, 117, 117, 0) 70%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(112, 112, 112, 1) 30%,rgba(133, 133, 133, 1) 62%,rgba(117, 117, 117, 0) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 101%;
+    margin-top: -2%;
     border-radius: 30%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -85,12 +96,98 @@ html, body{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    
+    /*background-image: url("/ti-89t_display.png");*/
+    background-size: 100% 100%;
+}
+#calc-screen-tabs {
+    height: 16%;
+    display: flex;
+}
+#calc-screen-tabs div {
+    height: 100%;
+    min-width: 0px;
+    padding-top: 1px;
+    flex-grow: 1;
+    padding-right: 2px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 10% 10% 0% 0% / 15% 15% 0% 0%;
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.5em;
+    letter-spacing: -0.25em;
+    line-height: 0.9;
+}
+#tab-empty {
+    flex-basis: 10%;
+    border-right: 1px solid black;
+}
+#calc-screen-history {
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
+}
+#calc-screen-history ul {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+#calc-screen-history ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.22em;
+}
+#calc-screen-history ul li div:nth-child(2) {
+    flex-grow: 1;
+    text-align: right;
+}
+#calc-screen-entry-div {
+    height: 11%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+#calc-screen-status {
+    height: 6%;
+}
+#calc-screen-text-entry {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    
+    background-color: transparent;
+    border: none;
+    
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
+    
+    padding: 0em 0.3em 0em 0.3em;
 }
 #calc-screen-shadow-top {
-    position: relative;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
     background: transparent;
     box-shadow: inset -2px 8px 6px rgba(0,0,0,0.3);
-    height: 100%;
 }
 #calc-screen-spacer {
     position: relative;
