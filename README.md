@@ -3,6 +3,6 @@ Experiments with CSS3 Flexbox. Graphing calculator purely modeled in CSS.
 
 Screenshot:
 
-![Calc](http://i.imgur.com/ifmNUdu.jpg)
+![Calc](http://i.imgur.com/EMmH3lR.png)
 
-See dev branch for latest developments.
+See dev / other branches for latest developments.
