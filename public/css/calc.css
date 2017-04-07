@@ -127,6 +127,29 @@ html, body{
 }
 #calc-screen-history {
     height: 67%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+#calc-screen-history ul {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+#calc-screen-history ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 1em;
+}
+#calc-screen-history ul li div:nth-child(2) {
+    flex-grow: 1;
+    text-align: right;
 }
 #calc-screen-entry-div {
     height: 11%;
