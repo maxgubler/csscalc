@@ -1,5 +1,6 @@
 var initialHeight;
 var inputID = '#calc-screen-text-entry';
+var calcHistory = [];
 
 $(function(){
     // SCALING
@@ -146,11 +147,26 @@ function resizeWidthAndFont() {
     $('#calc-outer').css('width', h / 2);
     $('body').css('font-size', newHeight + '%');
 }
+function recordHistory(ent, res) {
+	// create local data object and push it to the history array
+	var data = {entry:ent, result:res};
+	calcHistory.push(data);
+}
+function displayHistory() {
+    var numStored = calcHistory.length;
+    var htmlList = '';
+    for (var i = 0; i < numStored; i++) {
+        htmlList += '<li id=hist' + i + '><div>' + calcHistory[i].entry + '</div><div>' + calcHistory[i].result + '</div></li>';
+    }
+    $('#calc-screen-history ul').html(htmlList);
+}
 function evaluate() {
     $(inputID).val(function(index, entry){
-       var result = math.eval(entry);
-       return result;
+       var result = math.eval(entry).toString();
+       recordHistory(entry, result);
+       return entry;
     });
+    displayHistory();
     entryFocus();
 }
 function entryFocus(cPos) {

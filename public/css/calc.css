@@ -127,6 +127,35 @@ html, body{
 }
 #calc-screen-history {
     height: 67%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
+}
+#calc-screen-history ul {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+#calc-screen-history ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.22em;
+}
+#calc-screen-history ul li div:nth-child(2) {
+    flex-grow: 1;
+    text-align: right;
 }
 #calc-screen-entry-div {
     height: 11%;
@@ -141,14 +170,16 @@ html, body{
     display: block;
     height: 100%;
     width: 100%;
-    padding: 0;
     z-index: 999;
     
     background-color: transparent;
     border: none;
     
-    font-family: monospace, monospace;
-    font-size: 0.75em;
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
+    
+    padding: 0em 0.3em 0em 0.3em;
 }
 #calc-screen-shadow-top {
     position: absolute;
