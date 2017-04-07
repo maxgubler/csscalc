@@ -133,6 +133,10 @@ html, body{
     justify-content: flex-end;
     overflow: hidden;
     position: relative;
+    
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
 }
 #calc-screen-history ul {
     position: absolute;
@@ -145,7 +149,7 @@ html, body{
     justify-content: space-between;
     max-width: 100%;
     overflow: hidden;
-    min-height: 1em;
+    margin-bottom: 0.22em;
 }
 #calc-screen-history ul li div:nth-child(2) {
     flex-grow: 1;
