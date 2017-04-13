@@ -217,23 +217,23 @@ html, body{
     border-left: 1px solid #9c9c9c;
     
     cursor: pointer;
-    width: 1.6em;
-    height: 1.6em;
+    width: 1.4em;
+    height: 1.4em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .fbutton span {
     color: #dddddd;
-    font-size: 0.75em;
+    font-size: 0.74em;
     font-weight: bold;
 }
 #arrow-group {
     box-sizing: border-box;
-    margin-top: 1em;
+    margin-top: 1.2em;
     position: absolute;
-    width: 90%;
-    height: 1.5em;
+    width: 88%;
+    height: 1.2em;
     display: flex;
     justify-content: flex-end;
 }
@@ -245,17 +245,17 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.2em;
+    width: 1.2em;
 }
 .arrow span {
     color: #dddddd;
-    font-size: 0.75em;
+    font-size: 0.6em;
     font-weight: bold;
 }
 #arrow-updown {
-    width: 10%;
-    height: 100%;
+    width: 1.2em;
+    height: 1.2em;
     background: #222222;
     position: relative;
 }
@@ -263,23 +263,21 @@ html, body{
 #arrow-updown:before{
     background: #777777;
     height: inherit;
-    width: 23%;
-    border-radius: 0 90% 90% 0 / 0 50% 50% 0;
+    width: 30%;
+    border-radius: 0% 50% 50% 0% / 0% 50% 50% 0%;
     content: '';
     position: relative;
     float: left;
-    border: 1px solid #777777;
 }
 
 #arrow-updown:after{
     background: #777777;
     height: inherit;
-    width: 23%;
-    border-radius: 90% 0 0 90% / 50% 0 0 50%;
+    width: 30%;
+    border-radius: 50% 0% 0% 50% / 50% 0% 0% 50%;
     content: '';
     position: relative;
     float: right;
-    border: 1px solid #777777;
 }
 #arrow-up {
     position: absolute;
@@ -288,7 +286,6 @@ html, body{
     left: 0;
     right: 0;
     margin-top: -88%;
-    margin-left: -5%;
 }
 #arrow-down {
     position: absolute;
@@ -297,7 +294,6 @@ html, body{
     left: 0;
     right: 0;
     margin-bottom: -88%;
-    margin-left: -5%;
 }
 #columns {
     display: flex;
