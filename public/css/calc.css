@@ -322,6 +322,9 @@ position: relative;
     position: relative;
     width: 16%;
 }
+#col-4, #col-5 {
+    margin-top: 2.75em;
+}
 .col-1-btn, .col-2-btn, .col-3-btn, .col-4-btn, .col-5-btn {
     background: #717171;
     border-radius: 30% / 100%;
