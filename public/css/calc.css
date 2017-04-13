@@ -209,16 +209,12 @@ html, body{
     width: 80%;
 }
 #fbutton-group {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5% 10% 0% 10%;
 }
 .fbutton {
     position: relative;
-    display: inline-block;
-    padding: 5%;
-    margin: 2.5%;
     
     border-radius: 100%;
     background: #717171;
@@ -229,16 +225,16 @@ html, body{
     border-left: 1px solid #9c9c9c;
     
     cursor: pointer;
+    width: 1.6em;
+    height: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .fbutton span {
     color: #dddddd;
     font-size: 0.75em;
     font-weight: bold;
-    line-height: 0%;
-    
-    position: absolute;
-    left: 0px;
-    right: 0px;
 }
 #arrow-group {
     box-sizing: border-box;
@@ -326,7 +322,7 @@ position: relative;
 }
 #columns {
     display: flex;
-    margin: 5% 9% 0% 9%;
+    margin: 9% 9% 0% 9%;
     justify-content: space-between;
     color: #dddddd;
 }
