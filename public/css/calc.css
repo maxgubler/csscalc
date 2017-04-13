@@ -259,7 +259,6 @@ html, body{
     position: relative;
     float: left;
 }
-
 #arrow-updown:after{
     background: #777777;
     height: inherit;
@@ -324,7 +323,6 @@ html, body{
 }
 .col .btn span {
     font-size: 0.5em;
-    margin-bottom: 0.1em;
 }
 .col .btn.btn-blk {
     background: #222222;
