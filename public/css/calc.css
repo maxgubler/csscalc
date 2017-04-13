@@ -6,6 +6,12 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: "ti_pixel";
+    src: url("/font/ti_pixel.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 .hidden {
     visibility: hidden;
 }
