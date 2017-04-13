@@ -231,44 +231,33 @@ html, body{
 #arrow-group {
     box-sizing: border-box;
     margin-top: 1em;
-    padding-right: 14%;
     position: absolute;
-    text-align: right;
-    width: 100%;
-    height: 5%;
+    width: 90%;
+    height: 1.5em;
+    display: flex;
+    justify-content: flex-end;
 }
 .arrow {
-    position: relative;
-    display: inline-block;
-    padding: 5.5%;
     border-radius: 100%;
     background: #222222;
     cursor: pointer;
-    vertical-align: middle;
-    margin-right: -3%;
     z-index: 1337;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5em;
+    width: 1.5em;
 }
 .arrow span {
     color: #dddddd;
     font-size: 0.75em;
     font-weight: bold;
-    line-height: 0%;
-    
-    position: absolute;
-    text-align: center;
-    left: 0px;
-    right: 0px;
 }
 #arrow-updown {
     width: 10%;
     height: 100%;
     background: #222222;
-    border-radius: 0px;
-    padding: 0px;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: -3%;
 }
 
 #arrow-updown:before{
@@ -379,6 +368,13 @@ html, body{
     background: #b5ca96;
     color: black;
 }
+#col-1-diamond .fa-stop {
+    font-size: 0.35em;
+    transform: rotate(45deg);
+}
+#col-1-equal span {
+    font-size: 1em;
+}
 #col-1-on {
     border-radius: 40px 40px 50px 200px;
     padding-top: 30%;
@@ -387,7 +383,15 @@ html, body{
 }
 #col-2-shift .btn-padding {
     border-radius: 30% / 100%;
-    box-shadow: inset 0 0 0px 1px #bbbbbb;
+    box-shadow: inset 0 0 0px 1px #aaaaaa;
+    width: 97%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#col-2-shift .fa-arrow-up {
+    font-size: 0.6em;
 }
 #col-2-alpha {
     background: #cccccc;
@@ -402,6 +406,32 @@ html, body{
 }
 #col-3-cat {
     letter-spacing: -0.04em;
+}
+#col-3-period span {
+    font-size: 1.5em;
+    padding-bottom: 0.4em;
+}
+#col-4-backspace .fa-long-arrow-left {
+    font-size: 0.9em;
+}
+#col-4-comma span {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+#col-4-negative span:nth-child(1), #col-4-negative span:nth-child(3) {
+    font-size: 0.4em;
+}
+#col-4-negative span:nth-child(2) {
+    font-size: 1em;
+    padding: 0em 0.1em 0.13em 0.1em;
+}
+#col-5-caret .fa-chevron-up {
+    font-size: 0.45em;
+    margin-bottom: 0.3em;
+    transform: scaleX(1.4);
+}
+#col-5-div span, #col-5-mult span, #col-5-minus span, #col-5-plus span {
+    font-size: 1em;
 }
 #col-5-enter {
     border-radius: 40px 40px 200px 50px;
