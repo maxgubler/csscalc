@@ -7,8 +7,8 @@
 
 }
 @font-face {
-    font-family: "ti_pixel";
-    src: url("/font/ti_pixel.woff") format("woff");
+    font-family: 'ti_pixel';
+    src: url('/font/ti_pixel.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -187,77 +187,69 @@ html, body{
 }
 #calc-screen-spacer {
     position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 2.5%;
+    width: 80%;
     border-left: 2px solid #818181;
     border-right: 2px solid #6d6d6d;
     border-radius: 0px 0px 3px 3px;
     box-shadow: inset 0px 5px 6px -2px rgba(189,189,189,0.5);
-    
-    height: 2.5%;
-    
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 #fbutton-group {
     display: flex;
     justify-content: space-between;
     margin: 2.5% 10% 0% 10%;
 }
-.fbutton {
+#fbutton-group .btn {
     position: relative;
-    
-    border-radius: 100%;
+    height: 1.4em;
+    width: 1.4em;
     background: #717171;
-    box-shadow: -0.5px 0.2px 4px 0px #191919;
+    border-radius: 100%;
     border-top: 1px solid #888888;
     border-right: 1px solid #888888;
     border-bottom: 1px solid #717171;
     border-left: 1px solid #9c9c9c;
-    
-    cursor: pointer;
-    width: 1.4em;
-    height: 1.4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: -0.5px 0.2px 4px 0px #191919;
 }
-.fbutton span {
+#fbutton-group .btn span {
     color: #dddddd;
     font-size: 0.74em;
     font-weight: bold;
 }
 #arrow-group {
     box-sizing: border-box;
-    margin-top: 1.2em;
-    position: absolute;
-    width: 88%;
-    height: 1.2em;
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    height: 1.2em;
+    width: 88%;
+    margin-top: 1.2em;
 }
-.arrow {
-    border-radius: 100%;
-    background: #222222;
-    cursor: pointer;
-    z-index: 1337;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#arrow-group .btn {
     height: 1.2em;
     width: 1.2em;
+    background: #222222;
+    border-radius: 100%;
 }
-.arrow span {
+#arrow-group .btn span {
     color: #dddddd;
     font-size: 0.6em;
     font-weight: bold;
 }
 #arrow-updown {
-    width: 1.2em;
-    height: 1.2em;
-    background: #222222;
     position: relative;
+    height: 1.2em;
+    width: 1.2em;
+    background: #222222;
 }
-
 #arrow-updown:before{
     background: #777777;
     height: inherit;
@@ -295,45 +287,35 @@ html, body{
     justify-content: space-between;
     color: #dddddd;
 }
+#col-4, #col-5 {
+    margin-top: 2.78em;
+}
 .col {
     position: relative;
     width: 16%;
 }
-#col-4, #col-5 {
-    margin-top: 2.75em;
-}
-.btn {
+.col .btn {
     background: #717171;
     border-radius: 30% / 100%;
     box-shadow: 0.3px 0.15px 2px 1px #333333;
     color: #dddddd;
-    cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.04em;
     margin-bottom: 30%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 0.8em;
 }
-.btn span {
+.col .btn span {
     font-size: 0.5em;
     margin-bottom: 0.1em;
 }
-.btn-blk {
+.col .btn.btn-blk {
     background: #222222;
     color: #dddddd;
-    cursor: pointer;
     font-weight: bold;
     margin-bottom: 30%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 1.1em;
 }
-.btn-blk span {
+.col .btn.btn-blk span {
     font-size: 0.8em;
     margin-bottom: 0.1em;
 }
