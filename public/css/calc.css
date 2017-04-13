@@ -20,14 +20,6 @@ html, body{
     font-size: 100%;
     font-family: 'News Cycle', sans-serif;
 }
-#col-half {
-    position: relative;
-    width: 50%;
-}
-#outer-wrap {
-    position: relative;
-    height: 100%;
-}
 #calc-outer {
     position: relative;
     width: 240px;
