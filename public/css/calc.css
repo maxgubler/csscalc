@@ -12,7 +12,7 @@
 html, body{
     height: 100%;
     font-size: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'News Cycle', sans-serif;
 }
 #col-half {
     position: relative;
@@ -359,8 +359,9 @@ position: relative;
     box-shadow: 0.3px 0.15px 2px 1px #333333;
     color: #dddddd;
     cursor: pointer;
-    font-size: 0.5em;
+    font-size: 0.49em;
     font-weight: bold;
+    letter-spacing: 0.04em;
     margin-bottom: 30%;
     padding-top: 20%;
     padding-bottom: 20%;
@@ -419,14 +420,7 @@ position: relative;
     color: #713e89;
 }
 #col-3-cat {
-    letter-spacing: -0.05em;
-}
-#col-3-cat span {
-    -ms-transform:scale(0.9,1);
-    -o-transform:scale(0.9,1);
-    -moz-transfor:scale(0.9,1);
-    -webkit-transform:scale(0.9,1);
-    transform:scale(0.9,1);
+    letter-spacing: -0.04em;
 }
 #col-5-enter {
     border-radius: 40px 40px 200px 50px;
