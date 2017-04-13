@@ -282,7 +282,6 @@ html, body{
     border: 1px solid #777777;
 }
 #arrow-up {
-    padding: 55%;
     position: absolute;
     border-radius: 100%;
     top: 0;
@@ -292,7 +291,6 @@ html, body{
     margin-left: -5%;
 }
 #arrow-down {
-    padding: 55%;
     position: absolute;
     border-radius: 100%;
     bottom: 0;
