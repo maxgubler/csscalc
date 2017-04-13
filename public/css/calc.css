@@ -81,7 +81,6 @@ html, body{
 }
 #calc-screen {
     position: relative;
-    /*background: #a09d75;*/
     background: #739070;
     border-left: 2px solid #8c8c8c;
     border-top: 2px solid #565656;
@@ -89,10 +88,9 @@ html, body{
     box-shadow: inset -4px 4px 14px 5px rgba(0,0,0,0.2);
     
     margin-top: 15%;
-    height: 25%;
-    
     margin-left: auto;
     margin-right: auto;
+    height: 25%;
     width: 80%;
     
     /*background-image: url("/ti-89t_display.png");*/
@@ -301,14 +299,14 @@ html, body{
     justify-content: space-between;
     color: #dddddd;
 }
-#col-1, #col-2, #col-3, #col-4, #col-5{
+.col {
     position: relative;
     width: 16%;
 }
 #col-4, #col-5 {
     margin-top: 2.75em;
 }
-.col-1-btn, .col-2-btn, .col-3-btn, .col-4-btn, .col-5-btn {
+.btn {
     background: #717171;
     border-radius: 30% / 100%;
     box-shadow: 0.3px 0.15px 2px 1px #333333;
@@ -323,11 +321,11 @@ html, body{
     justify-content: center;
     height: 0.8em;
 }
-.col-1-btn span, .col-2-btn span, .col-3-btn span, .col-4-btn span, .col-5-btn span {
+.btn span {
     font-size: 0.5em;
     margin-bottom: 0.1em;
 }
-.col-2-btn-blk, .col-3-btn-blk, .col-4-btn-blk {
+.btn-blk {
     background: #222222;
     color: #dddddd;
     cursor: pointer;
@@ -339,19 +337,19 @@ html, body{
     justify-content: center;
     height: 1.1em;
 }
-.col-2-btn-blk span, .col-3-btn-blk span, .col-4-btn-blk span {
+.btn-blk span {
     font-size: 0.8em;
     margin-bottom: 0.1em;
 }
-.col-2-btn-blk {
+#col-2 .btn-blk {
     border-radius: 25% 15% 15% 25% / 50% 15% 15% 50%;
     box-shadow: 0.3px 0.15px 1px 0px #383838;
 }
-.col-3-btn-blk {
+#col-3 .btn-blk {
     border-radius: 15%;
     box-shadow: 0.3px 0.15px 1px 0px #383838;
 }
-.col-4-btn-blk {
+#col-4 .btn-blk {
     border-radius: 15% 25% 25% 15% / 15% 50% 50% 15%;
     box-shadow: -0.3px 0.15px 1px 0px #383838;
 }
