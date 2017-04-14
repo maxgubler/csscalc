@@ -236,5 +236,5 @@ function cover(cPos) {
     var entry = $(inputID).val();
     var start = entry.slice(0, cPos);
     var end = entry.slice(cPos, entry.length);
-    $('#inputCover').html('<span>' + start + '</span>' + end);
+    $('#inputCover').html('<span class="borderBlink">' + start + '</span>' + end);
 }

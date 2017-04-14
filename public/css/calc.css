@@ -12,6 +12,14 @@
     font-weight: normal;
     font-style: normal;
 }
+@keyframes borderBlink {    
+    from, to {    
+        border-color: black;
+    }    
+    50% {    
+        border-color: transparent;
+    }    
+}
 .hidden {
     visibility: hidden;
 }
@@ -192,6 +200,7 @@ html, body{
 #inputCover > span {
     border-right: 2px solid black;
     margin-right: -2px;
+    animation: borderBlink 1s step-end infinite;  
 }
 #calc-screen-shadow-top {
     position: absolute;
