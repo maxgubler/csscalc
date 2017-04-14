@@ -221,6 +221,7 @@ html, body{
 }
 #fbutton-group .btn span {
     color: #dddddd;
+    font-family: 'Cabin', sans-serif;
     font-size: 0.74em;
     font-weight: bold;
 }
