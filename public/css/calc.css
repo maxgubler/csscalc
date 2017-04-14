@@ -229,13 +229,14 @@ html, body{
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    height: 1.2em;
-    width: 88%;
+    height: 1.4em;
+    width: 25%;
     margin-top: 1.2em;
+    right: 12%;
 }
 #arrow-group .btn {
-    height: 1.2em;
-    width: 1.2em;
+    height: 1.4em;
+    width: 1.4em;
     background: #222222;
     border-radius: 100%;
 }
@@ -244,17 +245,21 @@ html, body{
     font-size: 0.5em;
 }
 #arrow-updown {
-    position: relative;
-    height: 1.2em;
-    width: 1.2em;
+    position: absolute;
+    height: 1.4em;
+    width: 1.4em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
     background: #222222;
 }
 #arrow-updown:before{
-    background: #777777;
+    background: #707070;
     height: inherit;
-    width: 30%;
-    border-radius: 0% 50% 50% 0% / 0% 50% 50% 0%;
-    border: 1px solid #777777;
+    width: 0.31em;
+    border-radius: 0em 0.5em 0.5em 0em / 0em 2em 2em 0em;
+    border-right: 0.33em solid #707070;
     content: '';
     position: relative;
     float: left;
@@ -262,20 +267,21 @@ html, body{
 #arrow-updown:after{
     background: #777777;
     height: inherit;
-    width: 30%;
-    border-radius: 50% 0% 0% 50% / 50% 0% 0% 50%;
-    border: 1px solid #777777;
+    width: 0.31em;
+    border-radius: 0.5em 0 0 0.5em / 2em 0em 0em 2em;
+    border-left: 0.33em solid #777777;
     content: '';
     position: relative;
     float: right;
 }
 #arrow-up span, #arrow-down span {
-    transform: scale(1.5, 1);
+    transform: scale(1.6, 1);
 }
 #arrow-up {
     position: absolute;
     top: 0;
-    margin-top: -88%;
+    margin-top: -83%;
+    z-index: 20;
     align-items: flex-start;
     padding-top: 0.2em;
     line-height: 0;
@@ -283,7 +289,8 @@ html, body{
 #arrow-down {
     position: absolute;
     bottom: 0;
-    margin-bottom: -88%;
+    margin-bottom: -83%;
+    z-index: 20;
     align-items: flex-end;
     padding-bottom: 0.2em;
 }
@@ -291,10 +298,16 @@ html, body{
     transform: scale(1, 1.4);
 }
 #arrow-left {
+    position: absolute;
+    left: 0;
+    z-index: 20;
     justify-content: flex-start;
     padding-left: 0.2em;
 }
 #arrow-right {
+    position: absolute;
+    right: 0;
+    z-index: 20;
     justify-content: flex-end;
     padding-right: 0.2em;
 }
