@@ -56,7 +56,7 @@ $(function(){
     // Clear
     $('#col-5-clear').click(function() {
         $(inputID).val('');
-        entryFocus();
+        entryFocus(0);
     });
     
     // Backspace
@@ -134,11 +134,10 @@ $(function(){
     
     
     
-    // On document load set input to readonly and focus
+    // On document load create input overlay, set input to readonly, and focus
+    $(inputID).after('<div id="inputCover"></div>');
     $(inputID).attr('readonly','readonly');
-    entryFocus();
-    $(inputID).after('<div id="inputCover" style="position: absolute; height: 100%; width: 100%; top: 0; background: red; z-index: 1000; font-family: \'pixelized\', monospace, monospace; \
-    font-size: 0.61em; letter-spacing: -0.1em; padding: 0em 0.3em 0em 0.3em;"><span style="border-right: 2px solid black"></span></div>');
+    entryFocus($(inputID).val().length);
 });
 
 
@@ -163,6 +162,7 @@ function displayHistory() {
     $('#calc-screen-history ul').html(htmlList);
 }
 function evaluate() {
+    var entryLen;
     $(inputID).val(function(index, entry){
        var result = math.eval(entry).toString();
        recordHistory(entry, result);
@@ -182,6 +182,7 @@ function entryFocus(cPos) {
         $(inputID)[0].selectionStart = cPos;
         $(inputID)[0].selectionEnd = cPos;
         $(inputID).focus();
+        cover(cPos);
     }
 }
 function insert(val) {
@@ -191,14 +192,12 @@ function insert(val) {
     if (cPos == entry.length) {
         // append value to end of string
         entry += val;
-        $('#inputCover').html('<span style="border-right: 1px solid black">' + entry + '</span>');
     }
     else {
         // split string entry and insert new value
         var start = entry.slice(0, cPos);
         var end = entry.slice(cPos, entry.length);
         entry = start + val + end;
-        $('#inputCover').html('<span style="border-right: 1px solid black">' + start + val + '</span>' + end);
     }
     // replace input value with new entry
     $(inputID).val(entry);
@@ -232,4 +231,10 @@ function buttonPress(val, id) {
     $(id).click(function(){
         insert(val);
     });
+}
+function cover(cPos) {
+    var entry = $(inputID).val();
+    var start = entry.slice(0, cPos);
+    var end = entry.slice(cPos, entry.length);
+    $('#inputCover').html('<span>' + start + '</span>' + end);
 }
