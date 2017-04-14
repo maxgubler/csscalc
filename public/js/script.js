@@ -66,29 +66,17 @@ $(function(){
     
     // Arrow Left
     $('#arrow-left').click(function() {
-        var cPos = $(inputID)[0].selectionStart;
-        if (cPos != 0) {
-            entryFocus(cPos - 1);
-        }
-        else {
-            entryFocus(cPos);
-        }
+        arrowLeft();
     });
     
     // Arrow Right
     $('#arrow-right').click(function() {
-        var cPos = $(inputID)[0].selectionStart;
-        if (cPos != $(inputID).val().length) {
-            entryFocus(cPos + 1);
-        }
-        else {
-            entryFocus(cPos);
-        }
+        arrowRight();
     });
     
     
     // KEYS
-    $(inputID).keypress(function(e) {
+    $(document).keypress(function(e) {
         // Acceptable codes
         // ( ) * + , - . / : 40-47
         // 0-9 : 48-57
@@ -99,12 +87,13 @@ $(function(){
         var key = e.which;
         if ((key >= 40 && key <= 57) || key === 61 || key === 94 || key === 94 || (key >= 97 && key <= 122) || (key >= 65 && key <= 90)) {
             var char = String.fromCharCode(key);
+            e.preventDefault();
             insert(char);
         }
     });
     
     // Enter / Return
-    $(inputID).keypress(function(e) {
+    $(document).keypress(function(e) {
         if (e.which === 13) {
             e.preventDefault();
             evaluate();
@@ -112,7 +101,7 @@ $(function(){
     });
     
     // Backspace
-    $(inputID).keydown(function(e) {
+    $(document).keydown(function(e) {
         if (e.which === 8) {
             e.preventDefault();
             backspace();
@@ -126,9 +115,15 @@ $(function(){
     });
     
     // Arrow Up / Down
-    $(inputID).keydown(function(e) {
+    $(document).keydown(function(e) {
         if (e.which === 38 || e.which === 40) {
             e.preventDefault();
+        }
+        else if (e.which === 37) {
+            arrowLeft();
+        }
+        else if (e.which === 39) {
+            arrowRight();
         }
     });
     
@@ -237,4 +232,22 @@ function cover(cPos) {
     var start = entry.slice(0, cPos);
     var end = entry.slice(cPos, entry.length);
     $('#inputCover').html('<span class="borderBlink">' + start + '</span>' + end);
+}
+function arrowLeft() {
+    var cPos = $(inputID)[0].selectionStart;
+    if (cPos != 0) {
+        entryFocus(cPos - 1);
+    }
+    else {
+        entryFocus(cPos);
+    }
+}
+function arrowRight() {
+    var cPos = $(inputID)[0].selectionStart;
+    if (cPos != $(inputID).val().length) {
+        entryFocus(cPos + 1);
+    }
+    else {
+        entryFocus(cPos);
+    }
 }
