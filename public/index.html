@@ -3,17 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script src="/js/jquery-3.1.0.min.js"></script>
-        <script src="/js/script.js"></script>
-        
-        <link href="/css/minireset.min.css" rel="stylesheet">
-        <link href="/css/normalize.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet"> 
-        <link href="/font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/calc.css" rel="stylesheet">
-        
+        <script>
+            (function(){
+                // Fix path for gh-pages
+                var pathname = window.location.pathname;
+                pathname = pathname.replace("index.html", "");
+                document.write('<script src="' + pathname + 'js/jquery-3.1.0.min.js"><\/script>');
+                document.write('<script src="' + pathname + 'js/math.js"><\/script>');
+                document.write('<script src="' + pathname + 'js/script.js"><\/script>');
+                document.write('<link href="' + pathname + 'css/minireset.min.css" rel="stylesheet">');
+                document.write('<link href="' + pathname + 'css/normalize.css" rel="stylesheet">');
+                document.write('<link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">');
+                document.write('<link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">');
+                document.write('<link href="' + pathname + 'font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">');
+                document.write('<link href="' + pathname + 'css/calc.css" rel="stylesheet">');
+                document.write('<style>@font-face { font-family: "pixelized"; src: url("' + pathname + 'font/pixelized.woff2") format("woff2"), url("' + pathname + 'font/pixelized.woff") format("woff"); font-weight: normal; font-style: normal;}</\style>');
+            })();
+        </script>    
         <title>MX-89 Titanium</title>
     </head>
     <body>
@@ -198,6 +204,5 @@
                 </div>
             </div>
         </div>
-        <script src="/js/math.js"></script>
     </body>
 </html>
