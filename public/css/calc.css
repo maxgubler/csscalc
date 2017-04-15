@@ -199,6 +199,7 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    overflow: hidden;
 }
 #inputCover span {
     height: 90%;
@@ -208,9 +209,6 @@ html, body{
     margin-right: -2px;
     animation: borderBlink 1s step-end infinite;
     flex-shrink: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /*direction: rtl;*/
 }
 #inputCover span:nth-child(2) {
     flex-grow: 1;
