@@ -12,6 +12,14 @@
     font-weight: normal;
     font-style: normal;
 }
+@keyframes borderBlink {    
+    from, to {    
+        border-color: black;
+    }    
+    50% {    
+        border-color: transparent;
+    }    
+}
 .hidden {
     visibility: hidden;
 }
@@ -176,6 +184,36 @@ html, body{
     letter-spacing: -0.1em;
     
     padding: 0em 0.3em 0em 0.3em;
+}
+#inputCover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    font-family: 'pixelized', monospace, monospace;
+    font-size: 0.61em;
+    letter-spacing: -0.1em;
+    padding: 0em 0.3em 0em 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+#inputCover span {
+    height: 90%;
+}
+#inputCover span:nth-child(1) {
+    border-right: 2px solid black;
+    margin-right: -2px;
+    animation: borderBlink 1s step-end infinite;
+    flex-shrink: 1;
+}
+#inputCover span:nth-child(2) {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #calc-screen-shadow-top {
     position: absolute;
