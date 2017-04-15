@@ -189,6 +189,9 @@ html, body{
     justify-content: flex-end;
     overflow: hidden;
 }
+#inputCover span {
+    height: 1em;
+}
 #inputCover span:nth-child(1) {
     border-right: 2px solid black;
     margin-right: -2px;
