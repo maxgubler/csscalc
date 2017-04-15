@@ -129,6 +129,10 @@ html, body{
     flex-basis: 10%;
     border-right: 1px solid black;
 }
+#calc-screen-history, #calc-screen-entry-div {
+    font-family: 'ti_pixel', sans-serif;
+    font-size: 0.54em;
+}
 #calc-screen-history {
     height: 67%;
     display: flex;
@@ -137,10 +141,6 @@ html, body{
     justify-content: flex-end;
     overflow: hidden;
     position: relative;
-    
-    font-family: 'pixelized', monospace, monospace;
-    font-size: 0.61em;
-    letter-spacing: -0.1em;
 }
 #calc-screen-history ul {
     position: absolute;
@@ -166,24 +166,15 @@ html, body{
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
-#calc-screen-status {
-    height: 6%;
-}
 #calc-screen-text-entry {
     position: relative;
     display: block;
     height: 100%;
     width: 100%;
-    z-index: 999;
-    
+    z-index: -1;
+    padding: 0em 0.3em 0em 0.3em;
     background-color: transparent;
     border: none;
-    
-    font-family: 'pixelized', monospace, monospace;
-    font-size: 0.61em;
-    letter-spacing: -0.1em;
-    
-    padding: 0em 0.3em 0em 0.3em;
 }
 #inputCover {
     position: absolute;
@@ -192,17 +183,11 @@ html, body{
     top: 0;
     background: transparent;
     z-index: 1000;
-    font-family: 'pixelized', monospace, monospace;
-    font-size: 0.61em;
-    letter-spacing: -0.1em;
     padding: 0em 0.3em 0em 0.3em;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
-}
-#inputCover span {
-    height: 90%;
 }
 #inputCover span:nth-child(1) {
     border-right: 2px solid black;
@@ -214,6 +199,9 @@ html, body{
     flex-grow: 1;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+#calc-screen-status {
+    height: 6%;
 }
 #calc-screen-shadow-top {
     position: absolute;
