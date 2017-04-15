@@ -1,6 +1,7 @@
 var initialHeight;
 var inputID = '#calc-screen-text-entry';
 var calcHistory = [];
+var cursorPosition = 0;
 
 $(function(){
     // SCALING
@@ -55,8 +56,7 @@ $(function(){
     
     // Clear
     $('#col-5-clear').click(function() {
-        $(inputID).val('');
-        entryFocus(0);
+        clear();
     });
     
     // Backspace
@@ -181,46 +181,45 @@ function entryFocus(cPos) {
     }
 }
 function insert(val) {
-    var cPos = $(inputID)[0].selectionStart;
     var entry = $(inputID).val();
     
-    if (cPos == entry.length) {
+    if (cursorPosition == entry.length) {
         // append value to end of string
         entry += val;
     }
     else {
         // split string entry and insert new value
-        var start = entry.slice(0, cPos);
-        var end = entry.slice(cPos, entry.length);
+        var start = entry.slice(0, cursorPosition);
+        var end = entry.slice(cursorPosition, entry.length);
         entry = start + val + end;
     }
     // replace input value with new entry
     $(inputID).val(entry);
     
     // advance cursor position and focus input
-    entryFocus(cPos + 1);
+    entryFocus(++cursorPosition);
 }
 function backspace() {
-    var cPos = $(inputID)[0].selectionStart;
     var entry = $(inputID).val();
-    if (cPos == 0) {
+    if (cursorPosition == 0) {
         return;
-    }
-    else if (cPos == entry.length) {
-        // trim last char from end of string
-        entry = entry.slice(0, cPos - 1);
     }
     else {
         // trim char from end of the starting substring
-        var start = entry.slice(0, cPos - 1);
-        var end = entry.slice(cPos, entry.length);
+        var start = entry.slice(0, cursorPosition - 1);
+        var end = entry.slice(cursorPosition, entry.length);
         entry = start + end;
     }
     // replace input value with new entry
     $(inputID).val(entry);
     
     // decrement cursor position and focus input
-    entryFocus(cPos - 1);
+    entryFocus(--cursorPosition);
+}
+function clear() {
+    $(inputID).val('');
+    cursorPosition = 0;
+    entryFocus(cursorPosition);
 }
 function buttonPress(val, id) {
     $(id).click(function(){
@@ -234,20 +233,19 @@ function cover(cPos) {
     $('#inputCover').html('<span>' + start + '</span><span>' + end + '</span>');
 }
 function arrowLeft() {
-    var cPos = $(inputID)[0].selectionStart;
-    if (cPos != 0) {
-        entryFocus(cPos - 1);
+    if (cursorPosition != 0) {
+        // decrement cursor position and focus input
+        entryFocus(--cursorPosition);
     }
     else {
-        entryFocus(cPos);
+        entryFocus(cursorPosition);
     }
 }
 function arrowRight() {
-    var cPos = $(inputID)[0].selectionStart;
-    if (cPos != $(inputID).val().length) {
-        entryFocus(cPos + 1);
+    if (cursorPosition != $(inputID).val().length) {
+        entryFocus(++cursorPosition);
     }
     else {
-        entryFocus(cPos);
+        entryFocus(cursorPosition);
     }
 }
